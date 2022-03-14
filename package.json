@@ -17,6 +17,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages  -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -36,6 +38,7 @@
       "not op_mini all"
     ],
     "development": [
+      
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
@@ -43,5 +46,7 @@
   },
   "devDependencies": {
     "semantic-ui-less": "^2.4.1"
-  }
+  },
+  "homepage": "https://KimberlyModeste.github.io"
+  
 }
