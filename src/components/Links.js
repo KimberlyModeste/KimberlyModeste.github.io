@@ -27,7 +27,7 @@ const Link = () => {
             detect_on: 'window',
             events: {
               onClick: {
-                enable: true,
+                enable: false,
                 mode: "push",
               },
               onHover: {

@@ -4,8 +4,7 @@ function Games(){
 
     return(
         <div >
-            
-            In Games
+            <h1>Work In Progress</h1>
         </div>
     )
 
