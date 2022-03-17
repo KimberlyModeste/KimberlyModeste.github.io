@@ -5,6 +5,7 @@ import MenuBar from './/components/MenuBar';
 
 import Home from './pages/Home';
 import Games from './pages/Games';
+import Resume from './pages/Resume';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <Routes> 
       <Route exact path="/" element = {<Home/>}/>
       <Route exact path="/games" element = {<Games />} />
+      <Route exact path="/Master_Resume.pdf" element = {<Resume />} />
     </Routes>
   </div>
   );

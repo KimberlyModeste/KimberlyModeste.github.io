@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Menu, Icon } from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
-import headshot from '../images/headshot.jpg';
 import '../App.css'
 
 const MenuBar = () => {
@@ -31,16 +30,41 @@ const MenuBar = () => {
     </Menu.Menu>
    
     <p id='navbarName'> 
-    <Icon name='laptop'  style={{color:"black"}} /> 
-    <Icon name='language' style={{color:"black"}} /> 
+    <Icon name='laptop'  /> 
+    <Icon name='language' /> 
    
     Kimberly's Portfolio 
     
-    <Icon name='image outline'  style={{color:"black"}} />
-    <Icon name='gamepad'  style={{color:"black"}} />
+    <Icon name='image outline'   />
+    <Icon name='gamepad'  />
     </p>
     <Menu.Menu position="right"/>
-    <img src={headshot} id="headshot" alt='My face' style={{ borderRadius: 400/ 2}} />
+    <Menu.Item>
+    <a rel="noreferrer"
+        id='social-icon-link'
+        href='https://github.com/KimberlyModeste'
+        target='_blank'
+    > 
+    <Icon name='github' size='large'/>
+    </a>
+    </Menu.Item>
+    <Menu.Item>
+    <a
+        rel="noreferrer"
+        id='social-icon-link'
+        href='https://www.linkedin.com/in/kimberly-modeste1'
+        target='_blank'
+    > 
+    <Icon name='linkedin' size='large'/>
+    </a>
+    </Menu.Item>
+    <Menu.Item name = "master_resume"
+    active={activeItem === 'master_resume'}
+    onClick={handleItemClick}
+    as={Link} to="/master_resume.pdf" >
+   
+    <Icon name='file alternate outline' size='large'/>
+    </Menu.Item>
     </Menu>
  );
 

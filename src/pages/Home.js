@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from '../components/Links';
-import headshot from '../images/headshot.jpg';
+import headshot from '../resources/headshot.jpg';
 
 function Home(){
 
