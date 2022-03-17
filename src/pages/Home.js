@@ -1,11 +1,14 @@
 import React from 'react';
 import Link from '../components/Links';
 import headshot from '../resources/headshot.jpg';
+import MenuBar from '../components/MenuBar';
 
 function Home(){
 
 return(
+    <div> <MenuBar color="black" inverted={false}/>
     <div className = "homediv" >
+       
     <Link />
     <img src={headshot} alt='My face but in home' style={{ width: "250px", height: "250px", borderRadius: 400/ 2}} />
     <p>
@@ -18,7 +21,7 @@ return(
         </h4>
     </p>
     </div>
-
+    </div>
 )
 }
 export default Home

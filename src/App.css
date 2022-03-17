@@ -47,10 +47,20 @@ a, a:hover, a:active, a:visited, a:focus {
   font-family: sans-serif;
   font-weight: 100;
   font-size: larger;
-  color: black; 
+  color: black;
   margin: auto;
   margin-left: 25%; 
 }
+
+#navbarNameInv{
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: larger;
+  color: rgb(161,161,161);
+  margin: auto;
+  margin-left: 25%; 
+}
+
 #headshot{
   width: 40px;
   height: 40px;
@@ -115,7 +125,11 @@ a, a:hover, a:active, a:visited, a:focus {
    
 }
 
-.ui.inverted.menu .purple.active.item, .ui.inverted.purple.menu {
-  background-color: #8f2696 !important;
+.resume{
+  background: black;
+}
+
+.ui.inverted.menu .grey.active.item, .ui.inverted.grey.menu {
+  background-color: black !important;
 }
 

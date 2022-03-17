@@ -11,7 +11,7 @@ import Resume from './pages/Resume';
 function App() {
   return (
   <div className="main-content">  
-   <MenuBar />
+   {/* <MenuBar /> */}
     <Routes> 
       <Route exact path="/" element = {<Home/>}/>
       <Route exact path="/games" element = {<Games />} />
