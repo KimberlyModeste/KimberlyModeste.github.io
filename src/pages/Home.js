@@ -1,24 +1,16 @@
 import React from 'react';
 import Link from '../components/Links';
-<<<<<<< HEAD
 import headshot from '../resources/headshot.jpg';
 import MenuBar from '../components/MenuBar';
-=======
 import headshot from '../images/headshot.jpg';
->>>>>>> parent of 706d7d0f (Merge branch 'master' of https://github.com/KimberlyModeste/KimberlyModest.Github)
 
 function Home(){
 
 return(
-<<<<<<< HEAD
     <div> <MenuBar color="black" inverted={false}/>
     <div className = "homediv" >
-       
-=======
-    <div className = "homediv" >
->>>>>>> parent of 706d7d0f (Merge branch 'master' of https://github.com/KimberlyModeste/KimberlyModest.Github)
     <Link />
-    <img src={headshot} alt='My face but in home' style={{ width: "250px", height: "250px", borderRadius: 400/ 2}} />
+    <img src={headshot} alt='My face but in home' style={{padding: '10px', width: "250px", height: "250px", borderRadius: 400/ 2}} />
     <p>
         <br/>
         <h1 style={{color:'black'}}>Hi! I'm Kimberly!</h1>
@@ -29,11 +21,7 @@ return(
         </h4>
     </p>
     </div>
-<<<<<<< HEAD
     </div>
-=======
-
->>>>>>> parent of 706d7d0f (Merge branch 'master' of https://github.com/KimberlyModeste/KimberlyModest.Github)
-)
+    )
 }
 export default Home

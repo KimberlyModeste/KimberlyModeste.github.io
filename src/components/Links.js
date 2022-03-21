@@ -27,11 +27,7 @@ const Link = () => {
             detect_on: 'window',
             events: {
               onClick: {
-<<<<<<< HEAD
-                enable: true,
-=======
                 enable: false,
->>>>>>> parent of 706d7d0f (Merge branch 'master' of https://github.com/KimberlyModeste/KimberlyModest.Github)
                 mode: "push",
               },
               onHover: {
