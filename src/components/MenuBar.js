@@ -128,6 +128,5 @@ const MenuBar = (props) => {
       </Menu.Item>
       </Menu>
  );
-
 }
 export default MenuBar;

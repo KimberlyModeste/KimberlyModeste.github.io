@@ -46,6 +46,9 @@ a, a:hover, a:active, a:visited, a:focus {
   font-family: sans-serif;
   font-weight: 100;
   font-size: larger;
+  color: black;
+  margin: auto;
+  margin-left: 25%; 
 }
 
 #navbarNameInv{
@@ -112,6 +115,7 @@ a, a:hover, a:active, a:visited, a:focus {
 .homediv {
   display: flex;
   justify-content: center; 
+  size: 16;
 }
 
 .headshot{
