@@ -21,4 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
 node_modules
+=======
+>>>>>>> parent of 706d7d0f (Merge branch 'master' of https://github.com/KimberlyModeste/KimberlyModest.Github)

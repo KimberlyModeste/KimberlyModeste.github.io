@@ -39,6 +39,7 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 a, a:hover, a:active, a:visited, a:focus {
   text-decoration:none;
@@ -46,10 +47,17 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 >>>>>>> dev
+=======
+a, a:hover, a:active, a:visited, a:focus {
+  text-decoration:none;
+}
+
+>>>>>>> parent of 706d7d0f (Merge branch 'master' of https://github.com/KimberlyModeste/KimberlyModest.Github)
 #navbarName{
   font-family: sans-serif;
   font-weight: 100;
   font-size: larger;
+<<<<<<< HEAD
   color: black;
   margin: auto;
   margin-left: 25%; 
@@ -64,6 +72,12 @@ a, a:hover, a:active, a:visited, a:focus {
   margin-left: 25%; 
 }
 
+=======
+  color: black; 
+  margin: auto;
+  margin-left: 25%; 
+}
+>>>>>>> parent of 706d7d0f (Merge branch 'master' of https://github.com/KimberlyModeste/KimberlyModest.Github)
 #headshot{
   width: 40px;
   height: 40px;
@@ -76,7 +90,11 @@ a, a:hover, a:active, a:visited, a:focus {
   right: 0;
   padding: 0;
   margin: 0;
+<<<<<<< HEAD
   z-index: -10;
+=======
+  z-index: -1;
+>>>>>>> parent of 706d7d0f (Merge branch 'master' of https://github.com/KimberlyModeste/KimberlyModest.Github)
 }
 #page-container {
   position: relative;
@@ -84,7 +102,11 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 #content-wrap {
+<<<<<<< HEAD
   padding-bottom: 1.5rem;    /* Footer height */
+=======
+  padding-bottom: 3.5rem;    /* Footer height */
+>>>>>>> parent of 706d7d0f (Merge branch 'master' of https://github.com/KimberlyModeste/KimberlyModest.Github)
 }
 
 #footer-container {
@@ -94,14 +116,22 @@ a, a:hover, a:active, a:visited, a:focus {
   position: absolute;
   background: #b496c6;
   width: 100%;
+<<<<<<< HEAD
   height: 1.5rem;
+=======
+  height: 3.5rem;
+>>>>>>> parent of 706d7d0f (Merge branch 'master' of https://github.com/KimberlyModeste/KimberlyModest.Github)
   bottom: 0;
 
 }
 
 #social-icon-link {
   color: rgb(32, 31, 31);
+<<<<<<< HEAD
   font-size: 20px;
+=======
+  font-size: 24px;
+>>>>>>> parent of 706d7d0f (Merge branch 'master' of https://github.com/KimberlyModeste/KimberlyModest.Github)
 }
 
 #social-media-wrap {
@@ -128,11 +158,16 @@ a, a:hover, a:active, a:visited, a:focus {
    
 }
 
+<<<<<<< HEAD
 .resume{
   background: black;
 }
 
 .ui.inverted.menu .grey.active.item, .ui.inverted.grey.menu {
   background-color: black !important;
+=======
+.ui.inverted.menu .purple.active.item, .ui.inverted.purple.menu {
+  background-color: #8f2696 !important;
+>>>>>>> parent of 706d7d0f (Merge branch 'master' of https://github.com/KimberlyModeste/KimberlyModest.Github)
 }
 
