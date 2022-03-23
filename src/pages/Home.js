@@ -13,7 +13,7 @@ return(
     
     <img src={headshot} alt='My face but in home' style={{padding: '10px', width: "150px", height: "150px", borderRadius: 400/ 2}} />
     <p>
-        <div style={{width: "300px", overflow: "visible"}}>
+        <div className='hometext'>
             <strong>Hi! I'm Kimberly!</strong> 
             <br/><br/>
                 I'm a computer scientist that likes making websites, games, drawing and learning languages! 
