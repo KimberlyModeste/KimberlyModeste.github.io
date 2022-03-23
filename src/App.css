@@ -48,7 +48,7 @@ a, a:hover, a:active, a:visited, a:focus {
   font-size: larger;
   color: black;
   margin: auto;
-  margin-left: 25%; 
+  margin-right: inherit;
 }
 
 #navbarNameInv{
@@ -57,7 +57,7 @@ a, a:hover, a:active, a:visited, a:focus {
   font-size: larger;
   color: rgb(161,161,161);
   margin: auto;
-  margin-left: 25%; 
+  margin-right: inherit;
 }
 
 #headshot{
@@ -115,14 +115,20 @@ a, a:hover, a:active, a:visited, a:focus {
 .homediv {
   display: flex;
   justify-content: center; 
-  size: 16;
 }
 
 .headshot{
     width: 250px;
     height: 250px;
-    justify-content: right; 
+    justify-content: left; 
    
+}
+
+.hometext{
+  width: 500px;
+  overflow: visible;
+  padding-top: 50px;
+  font-size: larger;
 }
 
 .resume{
