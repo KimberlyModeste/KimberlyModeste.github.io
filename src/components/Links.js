@@ -1,6 +1,10 @@
 import React from "react";
 import Particles from "react-tsparticles";
 
+const bgColor = "#e5e5fd"
+const partColor = "#59065f"
+
+
 const Link = () => {
     const particlesInit = (main) => {
       console.log(main);
@@ -19,7 +23,7 @@ const Link = () => {
         options={{
           background: {
             color: {
-              value: "#e5e5fd",
+              value: bgColor,
             },
           },
           fpsLimit: 120,
@@ -54,10 +58,10 @@ const Link = () => {
           },
           particles: {
             color: {
-              value: "#59065f",
+              value: partColor,
             },
             links: {
-              color: "#59065f",
+              color: partColor,
               distance: 150,
               enable: true,
               opacity: 0.5,
