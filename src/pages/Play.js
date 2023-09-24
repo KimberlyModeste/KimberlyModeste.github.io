@@ -2,7 +2,7 @@ import React from "react";
 import Link from '../components/Links';
 import MenuBar from "../components/MenuBar";
 
-function Games(){
+function Play(){
 
     return(
         <div >
@@ -14,4 +14,4 @@ function Games(){
 
 }
 
-export default Games;
+export default Play;

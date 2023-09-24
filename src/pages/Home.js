@@ -17,15 +17,9 @@ return(
             <strong>Hi! I'm Kimberly!</strong> 
             <br/><br/>
                 I'm a computer scientist that likes making websites, games, drawing and learning languages! 
-                I also like cryptography and solving puzzles! I have some of the games I worked on the games
-                tab, so feel free to play them. 
+                I also like cryptography and solving puzzles! I have some of the games and class models
+                in the play tab, so feel free to check them out.  
         </div>
-        {/* <h1 style={{color:'black'}}>Hi! I'm Kimberly!</h1> */}
-        {/* <h4>
-            I'm a computer scientist that likes making websites, games, drawing and learning languages! <br/>
-            I also like cryptography and solving puzzles! I have some of the games I worked on the games <br/>
-            tab, so feel free to play them. 
-        </h4> */}
     </p>
     </div>
     </div>

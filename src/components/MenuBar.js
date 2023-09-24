@@ -32,12 +32,12 @@ const MenuBar = (props) => {
         onClick={handleItemClick}
         as={Link} to="/" />
     
-        <Menu.Item name = "games"
-        active={activeItem === 'games'}
+        <Menu.Item name = "play"
+        active={activeItem === 'play'}
         onClick={handleItemClick}
-        as={Link} to="/games">   
+        as={Link} to="/play">   
         <Icon name='gamepad' />
-            Games
+            Play
         </Menu.Item>
     
         </Menu.Menu> 
@@ -83,12 +83,12 @@ const MenuBar = (props) => {
       onClick={handleItemClick}
       as={Link} to="/" />
     
-      <Menu.Item name = "games"
-      active={activeItem === 'games'}
+      <Menu.Item name = "play"
+      active={activeItem === 'play'}
       onClick={handleItemClick}
-      as={Link} to="/games">   
+      as={Link} to="/play">   
       <Icon name='gamepad' />
-          Games
+          Play
       </Menu.Item>
     
       </Menu.Menu>
