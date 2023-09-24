@@ -3,8 +3,9 @@ import './App.css';
 import {  Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
-import Games from './pages/Games';
+import Play from './pages/Play';
 import Resume from './pages/Resume';
+import Play from './pages/Play';
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
   <div className="main-content">  
     <Routes> 
       <Route exact path="/" element = {<Home/>}/>
-      <Route exact path="/games" element = {<Games />} />
+      <Route exact path="/play" element = {<Play />} />
       <Route exact path="/Master_Resume.pdf" element = {<Resume />} />
    </Routes>
   </div>
