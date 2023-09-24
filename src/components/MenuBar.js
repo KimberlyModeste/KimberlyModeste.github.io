@@ -32,12 +32,12 @@ const MenuBar = (props) => {
         onClick={handleItemClick}
         as={Link} to="/" />
     
-        <Menu.Item name = "games"
-        active={activeItem === 'games'}
+        <Menu.Item name = "play"
+        active={activeItem === 'play'}
         onClick={handleItemClick}
-        as={Link} to="/games">   
+        as={Link} to="/play">   
         <Icon name='gamepad' />
-            Games
+            Play
         </Menu.Item>
     
         </Menu.Menu> 
@@ -51,7 +51,7 @@ const MenuBar = (props) => {
         </p>
         <Menu.Menu position="right"/>
         <Menu.Item  name = "Github"
-        active={activeItem === 'Github'}
+        // active={activeItem === 'Github'}
         onClick={handleItemClick}
         href='https://github.com/KimberlyModeste'
         target='_blank'>
@@ -60,7 +60,7 @@ const MenuBar = (props) => {
        
         <Menu.Item 
         name = "LinkedIn"
-        active={activeItem === 'LinkenIn'}
+        // active={activeItem === 'LinkenIn'}
         onClick={handleItemClick}
         href='https://www.linkedin.com/in/kimberly-modeste1'
         target='_blank'>
@@ -83,12 +83,12 @@ const MenuBar = (props) => {
       onClick={handleItemClick}
       as={Link} to="/" />
     
-      <Menu.Item name = "games"
-      active={activeItem === 'games'}
+      <Menu.Item name = "play"
+      active={activeItem === 'play'}
       onClick={handleItemClick}
-      as={Link} to="/games">   
+      as={Link} to="/play">   
       <Icon name='gamepad' />
-          Games
+          Play
       </Menu.Item>
     
       </Menu.Menu>
@@ -103,7 +103,7 @@ const MenuBar = (props) => {
       </p>
       <Menu.Menu position="right"/>
       <Menu.Item  name = "Github"
-      active={activeItem === 'Github'}
+    //   active={activeItem === 'Github'}
       onClick={handleItemClick}
       href='https://github.com/KimberlyModeste'
       target='_blank'>
@@ -112,7 +112,7 @@ const MenuBar = (props) => {
      
       <Menu.Item 
       name = "LinkedIn"
-      active={activeItem === 'LinkenIn'}
+    //   active={activeItem === 'LinkenIn'}
       onClick={handleItemClick}
       href='https://www.linkedin.com/in/kimberly-modeste1'
       target='_blank'>
