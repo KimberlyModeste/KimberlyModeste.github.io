@@ -3,7 +3,6 @@ import './App.css';
 import {  Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
-import Play from './pages/Play';
 import Resume from './pages/Resume';
 import Play from './pages/Play';
 
