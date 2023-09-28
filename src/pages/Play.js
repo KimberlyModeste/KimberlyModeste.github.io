@@ -18,7 +18,7 @@ function Play(){
                 <h1 className="gamesText">Games</h1>
                 <Grid centered columns={5}>
                     <Grid.Column>                        
-                        <PlayerCard Name="A Journey Home" Image={AJH} Url = "https://kimberlymodeste.github.io/AJourneyHomeBasic"/>
+                        <PlayerCard Name="A Journey Home" Image={AJH} Url = "https://kimberlymodeste.github.io/AJourneyHomeJS"/>
                     </Grid.Column>
                 </Grid>
             </div>
