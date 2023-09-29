@@ -60,7 +60,7 @@ function Play(){
                     <Popup 
                         trigger={
                             <Grid.Column>
-                                <PlayerCard Name="Computer Graphics Class" Image={cg}  Url = "/CSC470" />
+                                <PlayerCard Name="Computer Graphics Class" Image={cg}  Url = "/#/CSC470" />
                             </Grid.Column>
                         }
                         content="Mooreland Properties, the application for renting, buying and managing properties."
