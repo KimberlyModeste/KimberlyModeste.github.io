@@ -1,11 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.f4844b31.css",
-    "main.js": "/static/js/main.46651901.js",
+    "main.css": "/static/css/main.768892ac.css",
+    "main.js": "/static/js/main.09e81e24.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/headshot.jpg": "/static/media/headshot.b9155ad12b18bc3b77ff.jpg",
     "static/media/brand-icons.svg": "/static/media/brand-icons.6729d29753e000c17489.svg",
     "static/media/icons.svg": "/static/media/icons.62d9dae4e0040e81c980.svg",
+    "static/media/MoorelandLogo.png": "/static/media/MoorelandLogo.48ce6e893d32894b63db.png",
+    "static/media/CreativeFall.PNG": "/static/media/CreativeFall.2efa324e9992c6c12802.PNG",
+    "static/media/CreativeSpring.PNG": "/static/media/CreativeSpring.565ef5fb5c2918a88264.PNG",
+    "static/media/CreativeTree.PNG": "/static/media/CreativeTree.83eaf928dbe9a4e66d28.PNG",
+    "static/media/CreativeWinter.PNG": "/static/media/CreativeWinter.cf1495f8cb62cc7cae41.PNG",
     "static/media/Master_Resume.pdf": "/static/media/Master_Resume.6b0bd109d5b428fdbc37.pdf",
     "static/media/outline-icons.svg": "/static/media/outline-icons.9c4845b4b41ef40a22fa.svg",
     "static/media/icons.eot": "/static/media/icons.a01e3f2d6c83dc3aee17.eot",
@@ -13,22 +18,30 @@
     "static/media/AJourneyHome.jpg": "/static/media/AJourneyHome.44f94186fdb6b74f6716.jpg",
     "static/media/brand-icons.eot": "/static/media/brand-icons.d68fa3e67dbb653a13ce.eot",
     "static/media/brand-icons.ttf": "/static/media/brand-icons.65a2fb6d9aaa164b41a0.ttf",
+    "static/media/P2.3.5.png": "/static/media/P2.3.5.c9b12f744883e5942e8d.png",
+    "static/media/P2.1.png": "/static/media/P2.1.7254e024cd6cd75c27c5.png",
     "static/media/brand-icons.woff": "/static/media/brand-icons.cac87dc00c87a5d74711.woff",
+    "static/media/2Creative.PNG": "/static/media/2Creative.cbb189ad89072ea826c8.PNG",
     "static/media/brand-icons.woff2": "/static/media/brand-icons.278156e41e0ad908cf7f.woff2",
+    "static/media/1Basic.PNG": "/static/media/1Basic.d82b960387ca02d61989.PNG",
     "static/media/icons.woff": "/static/media/icons.425399f81e4ce7cbd967.woff",
     "static/media/icons.woff2": "/static/media/icons.38c6d8bab26db77d8c80.woff2",
+    "static/media/2Basic.PNG": "/static/media/2Basic.3ba0b26b589d42a4f637.PNG",
+    "static/media/1Creative.PNG": "/static/media/1Creative.f733ef1896c176642a9a.PNG",
     "static/media/outline-icons.eot": "/static/media/outline-icons.752905fa5edf21fc52a1.eot",
     "static/media/outline-icons.ttf": "/static/media/outline-icons.5367103510b27b784827.ttf",
     "static/media/flags.png": "/static/media/flags.99f63ae7a743f21ab308.png",
+    "static/media/P2.3.3.png": "/static/media/P2.3.3.98719933c679ed97a5ce.png",
+    "static/media/P2.2.png": "/static/media/P2.2.c7c5c2ef3fafc1af5e1d.png",
     "static/media/outline-icons.woff": "/static/media/outline-icons.ddae9b1ba9b0b42f5880.woff",
     "static/media/outline-icons.woff2": "/static/media/outline-icons.687a4990ea22bb1a49d4.woff2",
     "index.html": "/index.html",
-    "main.f4844b31.css.map": "/static/css/main.f4844b31.css.map",
-    "main.46651901.js.map": "/static/js/main.46651901.js.map",
+    "main.768892ac.css.map": "/static/css/main.768892ac.css.map",
+    "main.09e81e24.js.map": "/static/js/main.09e81e24.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4844b31.css",
-    "static/js/main.46651901.js"
+    "static/css/main.768892ac.css",
+    "static/js/main.09e81e24.js"
   ]
 }
