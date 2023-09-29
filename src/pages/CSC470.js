@@ -24,6 +24,12 @@ import p42 from '../resources/P4C1.png'
 import p43 from '../resources/P4P1.mp4'
 import p44 from '../resources/P4P2.mp4'
 
+import p51 from '../resources/BoxGhost.mp4'
+import p52 from '../resources/BoxLightBoxBetter.mp4'
+import p53 from '../resources/LostSouls.mp4'
+import p54 from '../resources/FireSprites.mp4'
+
+
 function CSC470(){
 	
 
@@ -225,6 +231,71 @@ return(
                             </Grid.Column>
                         }
                         content="This one's is the spinning pots."
+                        position="top center"
+                    />
+                </Grid>
+            </div>
+
+            <div className='section'>
+                <div className="artSection">
+                    Last Project was using 3D objects in motion. After messing with shaders for a while and looking at the
+                    <br/>
+                    ambiguous instructions I decided to make something in 2D because its easier to bruteforce. The instructions
+                    <br/>
+                    had one line stating that it was supposed to be 3D so last minute I fixed up my previous iterations. 
+                    <br/>
+                    I'll also add my 2D project that I tried to do.
+                </div>
+                <Grid  columns={4}>
+                    <Popup 
+                        trigger={
+                            <Grid.Column>
+                                <video width="300" height="300" controls>
+                                    <source src={p51} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            </Grid.Column>
+                        }
+                        content="This one is just making boxes that spin at their own speed, I made it so that 
+                        the camera can move to get a better angle. It has a box texture with a funny reference."
+                        position="top center"
+                    />
+                    <Popup 
+                        trigger={
+                            <Grid.Column>
+                                <video width="300" height="300" controls>
+                                    <source src={p52} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            </Grid.Column>
+                        }
+                        content="This one runs the boxes around a light source and the boxes light bounces off each other 
+                        (the less harsh version). Also, you can see the bones of the boxes at the end."
+                        position="top center"
+                    />
+                    <Popup 
+                        trigger={
+                            <Grid.Column>
+                                <video width="300" height="300" controls>
+                                    <source src={p53} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            </Grid.Column>
+                        }
+                        content="This is one of the 2D projects that I created, it was only ever mostly finished. I had a few touches
+                        left for this."
+                        position="top center"
+                    />
+                    <Popup 
+                        trigger={
+                            <Grid.Column>
+                                <video width="300" height="300" controls>
+                                    <source src={p54} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            </Grid.Column>
+                        }
+                        content="This was only just being created when I had to switch gears but I think it still looks good."
                         position="top center"
                     />
                 </Grid>
