@@ -14,7 +14,7 @@ function App() {
       <Route exact path="/" element = {<Home/>}/>
       <Route exact path="/play" element = {<Play />} />
       <Route exact path="/Master_Resume.pdf" element = {<Resume />} />
-      <Route exact path='/#/CSC470' element={<CSC470 />} />
+      <Route exact path='/CSC470' element={<CSC470 />} />
     </Routes>
   </div>
   );
