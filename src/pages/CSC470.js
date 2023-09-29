@@ -19,6 +19,11 @@ import p32 from '../resources/CreativeSpring.PNG'
 import p33 from '../resources/CreativeFall.PNG'
 import p34 from '../resources/CreativeWinter.PNG'
 
+import p41 from '../resources/P4B1.png'
+import p42 from '../resources/P4C1.png'
+import p43 from '../resources/P4P1.mp4'
+import p44 from '../resources/P4P2.mp4'
+
 function CSC470(){
 	
 
@@ -168,6 +173,62 @@ return(
                 </Grid>
             </div>
 
+            <div className='section'>
+                <div className="artSection">
+                    This project is one of the bigger projects that has to do with 3d objects and lighting. In the first part,
+                    <br/>
+                    we were supposed to create a 3D house and extras, while messing with the lighting and colors. The second 
+                    <br/>
+                    part of this project is creating a tepot color hue where you can move the light and see how it works and 
+                    <br/>
+                    rotate the teapots.
+                </div>
+                <Grid  columns={4}>
+                    <Popup 
+                        trigger={
+                            <Grid.Column>
+                                <img  width="300px;" height="300px;" src={p41} alt ="Project 4.1"/>
+                            </Grid.Column>
+                        }
+                        content="This one is the basic 3D house, I also have this in different colors"
+                        position="top center"
+                    />
+                    <Popup 
+                        trigger={
+                            <Grid.Column>
+                                <img width="300px;" height="300px;" src={p42} alt="Project 4.2" />
+                            </Grid.Column>
+                        }
+                        content="This is the Creative 3D house with shadows."
+                        position="top center"
+                    />
+                    <Popup 
+                        trigger={
+                            <Grid.Column>
+                                <video width="300" height="300" controls>
+                                    <source src={p43} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            </Grid.Column>
+                        }
+                        content="This one was fun because you have to rotate the light around the teapot when pressing one direction, 
+                        so you have to change the direction to be negative at some point."
+                        position="top center"
+                    />
+                    <Popup 
+                        trigger={
+                            <Grid.Column>
+                                <video width="300" height="300" controls>
+                                    <source src={p44} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            </Grid.Column>
+                        }
+                        content="This one's is the spinning pots."
+                        position="top center"
+                    />
+                </Grid>
+            </div>
         </div>
     
     </div>
