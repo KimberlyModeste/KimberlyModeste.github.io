@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from '../components/Links';
+import Links from '../components/Links';
 import headshot from '../resources/headshot.jpg';
 import MenuBar from '../components/MenuBar';
 
@@ -8,7 +8,7 @@ function Home(){
 return(
     <div> 
     <MenuBar color="black" inverted={false}/>
-    <Link />
+    <Links />
     <div className = "homediv" >
     
     <img src={headshot} alt='My face but in home' style={{padding: '10px', width: "150px", height: "150px", borderRadius: 400/ 2}} />
