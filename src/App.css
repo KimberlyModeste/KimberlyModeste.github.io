@@ -149,6 +149,8 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 .artSection{
   padding-bottom: 30px !important;
+  padding-left: 16%;
+  padding-right: 16%;
 }
 .section{
   padding: 50px;
