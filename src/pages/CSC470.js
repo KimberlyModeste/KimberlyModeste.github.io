@@ -91,7 +91,7 @@ return(
                 <div className="artSection">
                     The next project was all about recreating images with math. The first part being just circles and the second
                     <br/>
-                    part drawing sided shapes inside sided shapes that you can change with a menu. 
+                    part was to draw sided shapes inside sided shapes that you can change with a menu. 
                 </div>
                 <Grid  columns={4}>
                     <Popup 
@@ -100,7 +100,7 @@ return(
                                 <img  width="300px;" height="300px;" src={p21} alt ="Project 2.1"/>
                             </Grid.Column>
                         }
-                        content="This one was just making the dino have the same orientation while as if its on a circle."
+                        content="This one was just making the dino have the same orientation as if its on a circle."
                         position="top center"
                     />
                     <Popup 
@@ -127,7 +127,7 @@ return(
                                 <img width="300px;" height="300px;" src={p232} alt="Project 2.3.2" />
                             </Grid.Column>
                         }
-                        content="Because I'm an overachiever (and like everything organized) you can even change the background to match your color choices better anc clear the screen."
+                        content="Because I'm an overachiever (and like everything organized) you can even change the background to match your color choices better and clear the screen."
                         position="top center"
                     />
                 </Grid>
@@ -181,7 +181,7 @@ return(
 
             <div className='section'>
                 <div className="artSection">
-                    This project is one of the bigger projects that has to do with 3d objects and lighting. In the first part,
+                    This project is one of the bigger projects that has to do with 3D objects and lighting. In the first part,
                     <br/>
                     we were supposed to create a 3D house and extras, while messing with the lighting and colors. The second 
                     <br/>
@@ -238,7 +238,7 @@ return(
 
             <div className='section'>
                 <div className="artSection">
-                    Last Project was using 3D objects in motion. After messing with shaders for a while and looking at the
+                    This last project was using 3D objects in motion. After messing with shaders for a while and looking at the
                     <br/>
                     ambiguous instructions I decided to make something in 2D because its easier to bruteforce. The instructions
                     <br/>

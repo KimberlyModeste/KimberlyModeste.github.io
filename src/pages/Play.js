@@ -7,7 +7,7 @@ import PlayerCard from "../components/PlayerCard";
 
 import AJH from '../resources/AJourneyHome.jpg'
 import MP from '../resources/MoorelandLogo.png'
-import Syn from '../resources/mainScreen.png'
+// import Syn from '../resources/mainScreen.png'
 import cg from '../resources/ComputerGraphics.png'
 
 function Play(){
@@ -19,8 +19,8 @@ function Play(){
             <div className="playDiv">
                 <div className="gamesText">
                     <h1>Projects</h1>
-                    <p classname="gameDescText">These are some of the games and projectsthat I worked on. <br/>
-                        Some of these are projects I worked on as a group and otheres
+                    <p classname="gameDescText">These are some of the games and projects that I worked on. <br/>
+                        Some of these are projects I worked on as a group and others
                         are ones that I worked on by myself.
                     </p>
                 </div>
@@ -40,7 +40,7 @@ function Play(){
                                 <PlayerCard className="pcard" Name="Mooreland Properties" Image={MP} Url = "https://smoothstack35-dev-ed.develop.my.site.com/accountportal/s/"/>
                             </Grid.Column>
                         }
-                        content="Mooreland Properties, the application for renting, buying and managing properties."
+                        content="Mooreland Properties: the application for renting, buying and managing properties."
                         position="top center"
                     />
                     {/* <Popup 
@@ -63,7 +63,7 @@ function Play(){
                                 <PlayerCard Name="Computer Graphics Class" Image={cg}  Url="#/CSC470" />
                             </Grid.Column>
                         }
-                        content="Mooreland Properties, the application for renting, buying and managing properties."
+                        content="This is most of the graphics that I made in my Computer Graphics Class."
                         position="top center"
                     />
                 </Grid>
