@@ -1,10 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.768892ac.css",
-    "main.js": "/static/js/main.45df2820.js",
+    "main.js": "/static/js/main.914bc3a1.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/P4P2.mp4": "/static/media/P4P2.64ede7970e6ee7f65315.mp4",
     "static/media/P4P1.mp4": "/static/media/P4P1.8ed43fc072ad1daf5a67.mp4",
+    "static/media/BoxGhost.mp4": "/static/media/BoxGhost.89b31b7205f00019206e.mp4",
+    "static/media/LostSouls.mp4": "/static/media/LostSouls.6f69e26d0dfd74f7bee2.mp4",
+    "static/media/FireSprites.mp4": "/static/media/FireSprites.c894967ae697d40ce945.mp4",
+    "static/media/BoxLightBoxBetter.mp4": "/static/media/BoxLightBoxBetter.b4a90bd49ee28d03f8fa.mp4",
     "static/media/headshot.jpg": "/static/media/headshot.b9155ad12b18bc3b77ff.jpg",
     "static/media/brand-icons.svg": "/static/media/brand-icons.6729d29753e000c17489.svg",
     "static/media/icons.svg": "/static/media/icons.62d9dae4e0040e81c980.svg",
@@ -41,11 +45,11 @@
     "static/media/outline-icons.woff2": "/static/media/outline-icons.687a4990ea22bb1a49d4.woff2",
     "index.html": "/index.html",
     "main.768892ac.css.map": "/static/css/main.768892ac.css.map",
-    "main.45df2820.js.map": "/static/js/main.45df2820.js.map",
+    "main.914bc3a1.js.map": "/static/js/main.914bc3a1.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.768892ac.css",
-    "static/js/main.45df2820.js"
+    "static/js/main.914bc3a1.js"
   ]
 }
