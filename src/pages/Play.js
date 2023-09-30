@@ -7,7 +7,7 @@ import PlayerCard from "../components/PlayerCard";
 
 import AJH from '../resources/AJourneyHome.jpg'
 import MP from '../resources/MoorelandLogo.png'
-// import Syn from '../resources/mainScreen.png'
+import Syn from '../resources/mainScreen.png'
 import cg from '../resources/ComputerGraphics.png'
 
 function Play(){
@@ -40,18 +40,18 @@ function Play(){
                                 <PlayerCard className="pcard" Name="Mooreland Properties" Image={MP} Url = "https://smoothstack35-dev-ed.develop.my.site.com/accountportal/s/"/>
                             </Grid.Column>
                         }
-                        content="Mooreland Properties: the application for renting, buying and managing properties."
+                        content="Mooreland Properties: the application for renting, buying and managing properties"
                         position="top center"
                     />
-                    {/* <Popup 
+                    <Popup 
                         trigger={
                             <Grid.Column>
-                                <PlayerCard Name="Synesthesia" Image={Syn} Url = "https://kimberlymodeste.github.io/Synesthesia"/>
+                                <PlayerCard Name="Synesthesia" Image={Syn} Url = "https://kimberlymodeste.github.io/Synesthesia/Build/WebBuild/index.html"/>
                             </Grid.Column>
                         }
                         content="A dialogue-based game that teaches players the basics on how to play the piano"
                         position="top center"
-                    /> */}
+                    />
                 </Grid>
             </div>
             <div className="playDiv">
@@ -63,7 +63,7 @@ function Play(){
                                 <PlayerCard Name="Computer Graphics Class" Image={cg}  Url="#/CSC470" />
                             </Grid.Column>
                         }
-                        content="This is most of the graphics that I made in my Computer Graphics Class."
+                        content="This is most of the graphics that I made in my Computer Graphics Class"
                         position="top center"
                     />
                 </Grid>
