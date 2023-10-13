@@ -155,6 +155,12 @@ a, a:hover, a:active, a:visited, a:focus {
 .section{
   padding: 50px;
 }
+.smallerSection{
+  padding: 30px;
+}
+.centered{
+  text-align: center;
+}
 .artText{
     font-size: large;
 }
@@ -168,4 +174,12 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .playDiv{
   padding: 50px 0;
+}
+
+.settingsDiv{
+  padding: 50px 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
 }

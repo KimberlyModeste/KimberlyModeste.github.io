@@ -5,8 +5,9 @@ import '../App.css'
 
 const MenuBar = (props) => {
 
-    const pathname = window.location.pathname;
-    let path = pathname === '/' ? 'home' : pathname.substr(1);
+    const pathname = window.location.hash;
+
+    let path = pathname.split('/')[1] === '' ? 'home' : pathname.split('/')[1];
 
     const handleItemClick = (e, { name }) => setActiveItem(name);
     const [activeItem, setActiveItem] = useState(path);
@@ -70,6 +71,13 @@ const MenuBar = (props) => {
 
         <Icon name='file alternate outline' size='large'/>
         </Menu.Item>
+        <Menu.Item name = "settings"
+        active={activeItem === 'settings'}
+        onClick={handleItemClick}
+        as={Link} to="/settings" >
+        
+        <Icon name='cog' size='large'/>
+        </Menu.Item>
         </Menu>
         :
         <Menu pointing secondary color={props.inverted? "grey" : ""} size="large" >
@@ -117,6 +125,14 @@ const MenuBar = (props) => {
         as={Link} to="/master_resume.pdf" >
         
         <Icon name='file alternate outline' size='large'/>
+        </Menu.Item>
+
+        <Menu.Item name = "settings"
+        active={activeItem === 'settings'}
+        onClick={handleItemClick}
+        as={Link} to="/settings" >
+        
+        <Icon name='cog' size='large'/>
         </Menu.Item>
         </Menu>
     );
