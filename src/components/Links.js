@@ -8,28 +8,16 @@ let isParticles = LinkSettings.particlesOn
 
 const Link = (props) => {
 
-  function changeColors(){
+  function updateLinks(){
     if(props.props){
       let temp = props.props
-      console.log("Props.props", props.props)
-
-      console.log("Links Here")
-      console.log("is particles on", isParticles)
-      console.log("props particles", temp.particlesOn)
-      // console.log("bgColor", bgColor)
-      // console.log("props.backgroundColor", temp.backgroundColor)
-      // // console.log("props.particleColor", props.props.particleColor)
-      // console.log("partColor", partColor)
-      // console.log(props)
-      // console.log("Are we going in?",!(bgColor === props.props.backgroundColor))
       if(!(bgColor === temp.backgroundColor))
       {
         bgColor = temp.backgroundColor
-        // console.log("Links bgcolor here", bgColor)
-        // // bgColor = LinkSettings.backgroundColor
-        // // props.props.backgroundColor = bgColor
-        // console.log("did")
-        // // updateState()
+      }
+      if(!(partColor === temp.particleColor))
+      {
+        partColor = temp.particleColor
       }
       if(!(isParticles === temp.particlesOn))
       {
@@ -41,7 +29,7 @@ const Link = (props) => {
   }
 
   
-  changeColors()
+  updateLinks()
   const particlesInit = (main) => {
     // console.log(main);
 
