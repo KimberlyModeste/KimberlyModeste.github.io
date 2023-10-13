@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Links from '../components/Links'
 import MenuBar from '../components/MenuBar';
-import { Grid, Popup } from "semantic-ui-react";
+import { Grid } from "semantic-ui-react";
 
 
 let {LinkSettings}  = require('../modules/modSettings')
@@ -42,11 +42,6 @@ function Settings (){
 	// }
 
 	function updateLinks(){
-		let temp = !check		
-
-		console.log("update check", check)
-		console.log("temp", temp)
-
 		LinkSettings.particlesOn = !check
 		setCheck(!check)
 	}
