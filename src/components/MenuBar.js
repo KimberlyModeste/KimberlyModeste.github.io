@@ -9,7 +9,8 @@ const MenuBar = (props) => {
 
     const pathname = window.location.hash;
 
-    let path = pathname.split('/')[1] === '' ? 'home' : pathname.split('/')[1];
+    let path = pathname.split('/').length > 1 ? pathname.split('/')[1] === '' ? 'home' : pathname.split('/')[1] : 'home'
+    // let path = pathname.split('/')[1] === '' ? 'home' : pathname.split('/')[1];
 
     const handleItemClick = (e, { name }) => setActiveItem(name);
     const [activeItem, setActiveItem] = useState(path);
