@@ -19,6 +19,7 @@ function Settings (){
 
 	const[check, setCheck] = useState(LinkSettings.particlesOn)
 	const[theme, setTheme] = useState(LinkSettings.themes)
+	const[, setRandom] =useState("")
 
 	function updateTheme(e){
 		let temp = parseInt(e.target.value)
@@ -52,6 +53,9 @@ function Settings (){
 					str1+=hexCode[Math.floor(Math.random()*hexCode.length)];
 					str2+=hexCode[Math.floor(Math.random()*hexCode.length)];
 				}
+				console.log("Str 1", str1)
+				console.log("Str 2", str2)
+				setRandom(str1)
 				LinkSettings.backgroundColor = str1
 				LinkSettings.particleColor= str2
 				break;
@@ -74,9 +78,9 @@ function Settings (){
 				LinkSettings.particleColor= "#59065f"
 				break;
 		}
+
 		LinkSettings.themes = temp
 		setTheme(temp)
-
 	}
 
 	function updateLinks(){
@@ -183,7 +187,7 @@ function Settings (){
 									style={{
 										textAlign:'center'
 									}}
-									type="checkbox" 
+									type="checkbox"
 									value={4}
 									checked={theme === 4}
 									onChange={updateTheme}

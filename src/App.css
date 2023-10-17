@@ -42,13 +42,19 @@ a, a:hover, a:active, a:visited, a:focus {
   text-decoration:none;
 }
 
-#navbarName{
+#myIcon.icon{
+  color: white !important;
+  mix-blend-mode: difference;
+}
+
+#navbarName {
   display: flex;
   /* flex-direction: column; */
   font-family: sans-serif;
   font-weight: 100;
   font-size: larger;
-  color: black;
+  color: white;
+  mix-blend-mode: difference;
   margin: auto;
   margin-right: inherit;
 }
@@ -116,6 +122,7 @@ a, a:hover, a:active, a:visited, a:focus {
 .homediv {
   display: flex;
   justify-content: center; 
+  width: fit-content;
 }
 
 .headshot{
@@ -126,9 +133,11 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .hometext{
-  width: 500px;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 47vw;
   overflow: visible;
-  padding-top: 50px;
+  margin-top: 50px;
+  padding-left: 10px;
   font-size: larger;
 }
 
@@ -136,12 +145,22 @@ a, a:hover, a:active, a:visited, a:focus {
   background: black;
 }
 
-.ui.inverted.menu .grey.active.item, .ui.inverted.grey.menu {
-  background-color: black !important;
+.ui.secondary.pointing.menu .item {
+  color: white;
+  mix-blend-mode: difference;
 }
 
-.ui.inverted.menu .purple.active.item, .ui.inverted.purple.menu {
-  background-color: #8f2696 !important;
+.ui.secondary.pointing.menu  .active.item {
+  border-color:  rgb(180, 180, 180) !important;
+  mix-blend-mode: difference;
+}
+.ui.secondary.pointing.menu  .active.item ,.item:hover {
+  color: rgb(180, 180, 180) !important;
+  mix-blend-mode: difference;
+}
+
+.ui.inverted.menu .grey.active.item, .ui.inverted.grey.menu {
+  background-color: black !important;
 }
 
 .ui.card:hover{

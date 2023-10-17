@@ -127,7 +127,7 @@ const MenuBar = (props) => {
             </Menu>
                 :
             //If Bigger Width and not Inverted
-            <Menu pointing secondary color={props.inverted? "grey" : ""} size="large" >
+            <Menu className='fullNavBar' pointing secondary color={props.inverted? "grey" : ""} size="large" >
                 <Menu.Menu position="left">
                 <Menu.Item name = "home"
                 active={activeItem === 'home'}
@@ -145,12 +145,12 @@ const MenuBar = (props) => {
                 </Menu.Menu>
                 
                 <p id='navbarName' > 
-                <Icon name='laptop'  color={props.inverted? props.color : "black"} /> 
-                <Icon name='language'  color={props.inverted? props.color : "black"} /> 
+                <Icon name='laptop'  color={props.inverted? props.color : "white"} /> 
+                <Icon name='language'  color={props.inverted? props.color : "white"} /> 
                 
                 Kimberly's Portfolio
-                <Icon name='image outline'    color={props.inverted? props.color : "black"}/>
-                <Icon name='gamepad'  color={props.inverted? props.color : "black"} />
+                <Icon name='image outline'    color={props.inverted? props.color : "white"}/>
+                <Icon name='gamepad'  color={props.inverted? props.color : "white"} />
                 </p>
 
                 <Menu.Menu position="right">
@@ -187,7 +187,7 @@ const MenuBar = (props) => {
         :
             props.inverted?
             //If Smaller Width and Inverted
-            <Menu pointing secondary inverted color="grey" size="large" >
+            <Menu className='fullNavBar' pointing secondary inverted color="grey" size="large" >
                 <Menu.Menu position="left">
                 <Menu.Item 
                     name = "home"
@@ -210,11 +210,11 @@ const MenuBar = (props) => {
                 <Popup 
                     trigger={
                         <p id='navbarName' > 
-                        <Icon name='laptop'  color={props.inverted? props.color : "black"} /> 
-                        <Icon name='language'  color={props.inverted? props.color : "black"} /> 
+                        <Icon name='laptop'  color={props.inverted? props.color : "white"} /> 
+                        <Icon name='language'  color={props.inverted? props.color : "white"} /> 
                         KP
-                        <Icon name='image outline'    color={props.inverted? props.color : "black"}/>
-                        <Icon name='gamepad'  color={props.inverted? props.color : "black"} />
+                        <Icon name='image outline'    color={props.inverted? props.color : "white"}/>
+                        <Icon name='gamepad'  color={props.inverted? props.color : "white"} />
                         </p>
                     }
                     content="Kimberly's Portfolio"
@@ -253,7 +253,7 @@ const MenuBar = (props) => {
             </Menu>
                 :
             //If Smaller Width and not Inverted
-            <Menu pointing secondary color={props.inverted? "grey" : ""} size="large" >
+            <Menu className='fullNavBar' pointing secondary color={props.inverted? "grey" : ""} size="large" >
                 <Menu.Menu position="left">
                 <Menu.Item 
                     name = "home"
@@ -276,11 +276,11 @@ const MenuBar = (props) => {
                 <Popup 
                     trigger={
                         <p id='navbarName' > 
-                        <Icon name='laptop'  color={props.inverted? props.color : "black"} /> 
-                        <Icon name='language'  color={props.inverted? props.color : "black"} /> 
+                        <Icon name='laptop'  color={props.inverted? props.color : "white"} /> 
+                        <Icon name='language'  color={props.inverted? props.color : "white"} /> 
                         KP
-                        <Icon name='image outline'    color={props.inverted? props.color : "black"}/>
-                        <Icon name='gamepad'  color={props.inverted? props.color : "black"} />
+                        <Icon name='image outline'    color={props.inverted? props.color : "white"}/>
+                        <Icon name='gamepad'  color={props.inverted? props.color : "white"} />
                         </p>
                     }
                     content="Kimberly's Portfolio"

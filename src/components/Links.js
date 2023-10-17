@@ -22,8 +22,6 @@ const Link = (props) => {
       if(!(isParticles === temp.particlesOn))
       {
         isParticles = temp.particlesOn
-        console.log("did")
-        console.log("isParticles", isParticles)
       }
     }
   }
