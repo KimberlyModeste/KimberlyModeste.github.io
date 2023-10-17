@@ -196,7 +196,7 @@ const MenuBar = (props) => {
                     active={activeItem === 'home'}
                     onClick={handleItemClick}
                     as={Link} to="/" >
-                    <Icon name='home' size='large'/>
+                    <Icon name='home'/>
                 </Menu.Item>
                 
                 <Menu.Item 
@@ -204,37 +204,23 @@ const MenuBar = (props) => {
                     active={activeItem === 'play'}
                     onClick={handleItemClick}
                     as={Link} to="/play">   
-                    <Icon name='gamepad' size='large'/>
+                    <Icon name='gamepad' />
                 </Menu.Item>
                 
                 </Menu.Menu>
 
-                <Popup 
-                    trigger={
-                        <p id='navbarName' > 
-                        <Icon name='laptop'  color={props.inverted? props.color : "white"} /> 
-                        <Icon name='language'  color={props.inverted? props.color : "white"} /> 
-                        KP
-                        <Icon name='image outline'    color={props.inverted? props.color : "white"}/>
-                        <Icon name='gamepad'  color={props.inverted? props.color : "white"} />
-                        </p>
-                    }
-                    content="Kimberly's Portfolio"
-                    position="top center"
-                />
-                
                 <Menu.Menu position="right">
                 <Menu.Item  name = "Github"
                 href='https://github.com/KimberlyModeste'
                 target='_blank'>
-                <Icon name='github' size='large'/>
+                <Icon name='github'/>
                 </Menu.Item>
 
                 <Menu.Item 
                 name = "LinkedIn"
                 href='https://www.linkedin.com/in/kimberly-modeste1'
                 target='_blank'>
-                <Icon name='linkedin' size='large'/>
+                <Icon name='linkedin'/>
                 </Menu.Item>
             
                 <Menu.Item name = "master_resume"
@@ -242,14 +228,14 @@ const MenuBar = (props) => {
                 onClick={handleItemClick}
                 as={Link} to="/master_resume.pdf" >
 
-                <Icon name='file alternate outline' size='large'/>
+                <Icon name='file alternate outline'/>
                 </Menu.Item>
                 <Menu.Item name = "settings"
                 active={activeItem === 'settings'}
                 onClick={handleItemClick}
                 as={Link} to="/settings" >
                 
-                <Icon name='cog' size='large'/>
+                <Icon name='cog'/>
                 </Menu.Item>
                 </Menu.Menu>
             </Menu>
@@ -274,21 +260,6 @@ const MenuBar = (props) => {
                 </Menu.Item>
                 
                 </Menu.Menu>
-
-                {/* <Popup 
-                    trigger={
-                        <p id='navbarName' > 
-                        <Icon name='laptop'  color={props.inverted? props.color : "white"} /> 
-                        <Icon name='language'  color={props.inverted? props.color : "white"} /> 
-                        KP
-                        <Icon name='image outline'    color={props.inverted? props.color : "white"}/>
-                        <Icon name='gamepad'  color={props.inverted? props.color : "white"} />
-                        </p>
-                    }
-                    content="Kimberly's Portfolio"
-                    position="top center"
-                />
-                 */}
 
                 <Menu.Menu position="right">
                     <Menu.Item  name = "Github"
