@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Menu, Icon } from 'semantic-ui-react';
+import React, { useState, useEffect } from 'react'
+import { Menu, Icon, Popup } from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
 import '../App.css'
 
@@ -8,12 +8,24 @@ let {LinkSettings}  = require('../modules/modSettings')
 const MenuBar = (props) => {
 
     const pathname = window.location.hash;
+    const [width, setWidth] = useState(window.innerWidth);
 
     let path = pathname.split('/').length > 1 ? pathname.split('/')[1] === '' ? 'home' : pathname.split('/')[1] : 'home'
     // let path = pathname.split('/')[1] === '' ? 'home' : pathname.split('/')[1];
 
     const handleItemClick = (e, { name }) => setActiveItem(name);
     const [activeItem, setActiveItem] = useState(path);
+
+    function handleWindowSizeChange() {
+        setWidth(window.innerWidth);
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
+        }
+    }, []);
 
     function shadeColor(color, percent) {
 
@@ -54,116 +66,260 @@ const MenuBar = (props) => {
     }
 
     return (
-        props.inverted?
-        <Menu pointing secondary inverted color="grey" size="large" >
-        <Menu.Menu position="left">
-        <Menu.Item name = "home"
-        active={activeItem === 'home'}
-        onClick={handleItemClick}
-        as={Link} to="/" />
-    
-        <Menu.Item name = "play"
-        active={activeItem === 'play'}
-        onClick={handleItemClick}
-        as={Link} to="/play">   
-        <Icon name='gamepad' />
-            Play
-        </Menu.Item>
-    
-        </Menu.Menu> 
-        <p id='navbarNameInv' > 
-        <Icon name='laptop' /> 
-        <Icon name='language' /> 
-        
-        Kimberly's Portfolio
-        <Icon name='image outline' />
-        <Icon name='gamepad' />
-        </p>
-        <Menu.Menu position="right"/>
-        <Menu.Item  name = "Github"
-        href='https://github.com/KimberlyModeste'
-        target='_blank'>
-        <Icon name='github' size='large'/>
-        </Menu.Item>
+        width > 778?
+            props.inverted?
+            //If Bigger Width and Inverted
+            <Menu pointing secondary inverted color="grey" size="large" >
+                <Menu.Menu position="left">
+                <Menu.Item name = "home"
+                active={activeItem === 'home'}
+                onClick={handleItemClick}
+                as={Link} to="/" />
+            
+                <Menu.Item name = "play"
+                active={activeItem === 'play'}
+                onClick={handleItemClick}
+                as={Link} to="/play">   
+                <Icon name='gamepad' />
+                    Play
+                </Menu.Item>
+            
+                </Menu.Menu> 
+                
+                <p id='navbarNameInv' > 
+                <Icon name='laptop' /> 
+                <Icon name='language' /> 
+                
+                Kimberly's Portfolio
+                <Icon name='image outline' />
+                <Icon name='gamepad' />
+                </p>
 
-        <Menu.Item 
-        name = "LinkedIn"
-        href='https://www.linkedin.com/in/kimberly-modeste1'
-        target='_blank'>
-        <Icon name='linkedin' size='large'/>
-        </Menu.Item>
-    
-        <Menu.Item name = "master_resume"
-        active={activeItem === 'master_resume'}
-        onClick={handleItemClick}
-        as={Link} to="/master_resume.pdf" >
+                <Menu.Menu position="right">
+                <Menu.Item  name = "Github"
+                href='https://github.com/KimberlyModeste'
+                target='_blank'>
+                <Icon name='github' size='large'/>
+                </Menu.Item>
 
-        <Icon name='file alternate outline' size='large'/>
-        </Menu.Item>
-        <Menu.Item name = "settings"
-        active={activeItem === 'settings'}
-        onClick={handleItemClick}
-        as={Link} to="/settings" >
-        
-        <Icon name='cog' size='large'/>
-        </Menu.Item>
-        </Menu>
+                <Menu.Item 
+                name = "LinkedIn"
+                href='https://www.linkedin.com/in/kimberly-modeste1'
+                target='_blank'>
+                <Icon name='linkedin' size='large'/>
+                </Menu.Item>
+            
+                <Menu.Item name = "master_resume"
+                active={activeItem === 'master_resume'}
+                onClick={handleItemClick}
+                as={Link} to="/master_resume.pdf" >
+
+                <Icon name='file alternate outline' size='large'/>
+                </Menu.Item>
+                <Menu.Item name = "settings"
+                active={activeItem === 'settings'}
+                onClick={handleItemClick}
+                as={Link} to="/settings" >
+                
+                <Icon name='cog' size='large'/>
+                </Menu.Item>
+                </Menu.Menu>
+            </Menu>
+                :
+            //If Bigger Width and not Inverted
+            <Menu pointing secondary color={props.inverted? "grey" : ""} size="large" >
+                <Menu.Menu position="left">
+                <Menu.Item name = "home"
+                active={activeItem === 'home'}
+                onClick={handleItemClick}
+                as={Link} to="/" />
+                
+                <Menu.Item name = "play"
+                active={activeItem === 'play'}
+                onClick={handleItemClick}
+                as={Link} to="/play">   
+                <Icon name='gamepad' />
+                    Play
+                </Menu.Item>
+                
+                </Menu.Menu>
+                
+                <p id='navbarName' > 
+                <Icon name='laptop'  color={props.inverted? props.color : "black"} /> 
+                <Icon name='language'  color={props.inverted? props.color : "black"} /> 
+                
+                Kimberly's Portfolio
+                <Icon name='image outline'    color={props.inverted? props.color : "black"}/>
+                <Icon name='gamepad'  color={props.inverted? props.color : "black"} />
+                </p>
+
+                <Menu.Menu position="right">
+                    <Menu.Item  name = "Github"
+                    href='https://github.com/KimberlyModeste'
+                    target='_blank'>
+                    <Icon name='github' size='large'/>
+                    </Menu.Item>
+                    
+                    <Menu.Item 
+                    name = "LinkedIn"
+                    href='https://www.linkedin.com/in/kimberly-modeste1'
+                    target='_blank'>
+                    <Icon name='linkedin' size='large'/>
+                    </Menu.Item>
+                    
+                    <Menu.Item name = "master_resume"
+                    active={activeItem === 'master_resume'}
+                    onClick={handleItemClick}
+                    as={Link} to="/master_resume.pdf" >
+                    
+                    <Icon name='file alternate outline' size='large'/>
+                    </Menu.Item>
+
+                    <Menu.Item name = "settings"
+                    active={activeItem === 'settings'}
+                    onClick={handleItemClick}
+                    as={Link} to="/settings" >
+                    
+                    <Icon name='cog' size='large'/>
+                    </Menu.Item>
+                </Menu.Menu>
+            </Menu>
         :
-        <Menu pointing secondary color={props.inverted? "grey" : ""} size="large" >
-        <Menu.Menu position="left">
-        <Menu.Item name = "home"
-        active={activeItem === 'home'}
-        onClick={handleItemClick}
-        as={Link} to="/" />
-        
-        <Menu.Item name = "play"
-        active={activeItem === 'play'}
-        onClick={handleItemClick}
-        as={Link} to="/play">   
-        <Icon name='gamepad' />
-            Play
-        </Menu.Item>
-        
-        </Menu.Menu>
-        
-        <p id='navbarName' > 
-        <Icon name='laptop'  color={props.inverted? props.color : "black"} /> 
-        <Icon name='language'  color={props.inverted? props.color : "black"} /> 
-        
-        Kimberly's Portfolio
-        <Icon name='image outline'    color={props.inverted? props.color : "black"}/>
-        <Icon name='gamepad'  color={props.inverted? props.color : "black"} />
-        </p>
-        <Menu.Menu position="right"/>
-        <Menu.Item  name = "Github"
-        href='https://github.com/KimberlyModeste'
-        target='_blank'>
-        <Icon name='github' size='large'/>
-        </Menu.Item>
-        
-        <Menu.Item 
-        name = "LinkedIn"
-        href='https://www.linkedin.com/in/kimberly-modeste1'
-        target='_blank'>
-        <Icon name='linkedin' size='large'/>
-        </Menu.Item>
-        
-        <Menu.Item name = "master_resume"
-        active={activeItem === 'master_resume'}
-        onClick={handleItemClick}
-        as={Link} to="/master_resume.pdf" >
-        
-        <Icon name='file alternate outline' size='large'/>
-        </Menu.Item>
+            props.inverted?
+            //If Smaller Width and Inverted
+            <Menu pointing secondary inverted color="grey" size="large" >
+                <Menu.Menu position="left">
+                <Menu.Item 
+                    name = "home"
+                    active={activeItem === 'home'}
+                    onClick={handleItemClick}
+                    as={Link} to="/" >
+                    <Icon name='home' size='large'/>
+                </Menu.Item>
+                
+                <Menu.Item 
+                    name = "play"
+                    active={activeItem === 'play'}
+                    onClick={handleItemClick}
+                    as={Link} to="/play">   
+                    <Icon name='gamepad' size='large'/>
+                </Menu.Item>
+                
+                </Menu.Menu>
 
-        <Menu.Item name = "settings"
-        active={activeItem === 'settings'}
-        onClick={handleItemClick}
-        as={Link} to="/settings" >
-        
-        <Icon name='cog' size='large'/>
-        </Menu.Item>
-        </Menu>
+                <Popup 
+                    trigger={
+                        <p id='navbarName' > 
+                        <Icon name='laptop'  color={props.inverted? props.color : "black"} /> 
+                        <Icon name='language'  color={props.inverted? props.color : "black"} /> 
+                        KP
+                        <Icon name='image outline'    color={props.inverted? props.color : "black"}/>
+                        <Icon name='gamepad'  color={props.inverted? props.color : "black"} />
+                        </p>
+                    }
+                    content="Kimberly's Portfolio"
+                    position="top center"
+                />
+                
+                <Menu.Menu position="right">
+                <Menu.Item  name = "Github"
+                href='https://github.com/KimberlyModeste'
+                target='_blank'>
+                <Icon name='github' size='large'/>
+                </Menu.Item>
+
+                <Menu.Item 
+                name = "LinkedIn"
+                href='https://www.linkedin.com/in/kimberly-modeste1'
+                target='_blank'>
+                <Icon name='linkedin' size='large'/>
+                </Menu.Item>
+            
+                <Menu.Item name = "master_resume"
+                active={activeItem === 'master_resume'}
+                onClick={handleItemClick}
+                as={Link} to="/master_resume.pdf" >
+
+                <Icon name='file alternate outline' size='large'/>
+                </Menu.Item>
+                <Menu.Item name = "settings"
+                active={activeItem === 'settings'}
+                onClick={handleItemClick}
+                as={Link} to="/settings" >
+                
+                <Icon name='cog' size='large'/>
+                </Menu.Item>
+                </Menu.Menu>
+            </Menu>
+                :
+            //If Smaller Width and not Inverted
+            <Menu pointing secondary color={props.inverted? "grey" : ""} size="large" >
+                <Menu.Menu position="left">
+                <Menu.Item 
+                    name = "home"
+                    active={activeItem === 'home'}
+                    onClick={handleItemClick}
+                    as={Link} to="/" >
+                    <Icon name='home' size='large'/>
+                </Menu.Item>
+                
+                <Menu.Item 
+                    name = "play"
+                    active={activeItem === 'play'}
+                    onClick={handleItemClick}
+                    as={Link} to="/play">   
+                    <Icon name='gamepad' size='large'/>
+                </Menu.Item>
+                
+                </Menu.Menu>
+
+                <Popup 
+                    trigger={
+                        <p id='navbarName' > 
+                        <Icon name='laptop'  color={props.inverted? props.color : "black"} /> 
+                        <Icon name='language'  color={props.inverted? props.color : "black"} /> 
+                        KP
+                        <Icon name='image outline'    color={props.inverted? props.color : "black"}/>
+                        <Icon name='gamepad'  color={props.inverted? props.color : "black"} />
+                        </p>
+                    }
+                    content="Kimberly's Portfolio"
+                    position="top center"
+                />
+                
+
+                <Menu.Menu position="right">
+                    <Menu.Item  name = "Github"
+                    href='https://github.com/KimberlyModeste'
+                    target='_blank'>
+                    <Icon name='github' size='large'/>
+                    </Menu.Item>
+                    
+                    <Menu.Item 
+                    name = "LinkedIn"
+                    href='https://www.linkedin.com/in/kimberly-modeste1'
+                    target='_blank'>
+                    <Icon name='linkedin' size='large'/>
+                    </Menu.Item>
+                    
+                    <Menu.Item name = "master_resume"
+                    active={activeItem === 'master_resume'}
+                    onClick={handleItemClick}
+                    as={Link} to="/master_resume.pdf" >
+                    
+                    <Icon name='file alternate outline' size='large'/>
+                    </Menu.Item>
+
+                    <Menu.Item name = "settings"
+                    active={activeItem === 'settings'}
+                    onClick={handleItemClick}
+                    as={Link} to="/settings" >
+                    
+                    <Icon name='cog' size='large'/>
+                    </Menu.Item>
+                </Menu.Menu>
+            </Menu>
     );
+    
 }
 export default MenuBar;
