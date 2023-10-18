@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Menu, Icon, Popup } from 'semantic-ui-react';
+import { Menu, Icon } from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
 import '../App.css'
 
