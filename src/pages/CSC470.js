@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Links from '../components/Links';
 import MenuBar from '../components/MenuBar';
 
-import { Grid, Popup } from "semantic-ui-react";
+import { Grid, Modal, Popup } from "semantic-ui-react";
 
 import p1b1 from '../resources/1Basic.PNG'
 import p1c1 from '../resources/1Creative.PNG'
@@ -28,16 +28,44 @@ import p51 from '../resources/BoxGhost.mp4'
 import p52 from '../resources/BoxLightBoxBetter.mp4'
 import p53 from '../resources/LostSouls.mp4'
 import p54 from '../resources/FireSprites.mp4'
+import { useEffect } from 'react';
 
 
 function CSC470(){
 	
-    //width="100%;" height="100%;"
+    const[showModal, setModal] = useState(false)
+    const[modalImg, setModalImg] = useState('https://react.semantic-ui.com/images/wireframe/image.png')
+
+    function onClickImage (name){
+        setModal(true)
+        setModalImg(name.target.currentSrc)
+
+    }
+    function handleClose(){
+        setModal(false)
+    }
+    
 
 return(
     <div> 
     <MenuBar color="black" inverted={false}/>
     <Links />
+        <Modal
+            onClose={handleClose}
+            open={showModal}
+            style={{
+                position: 'absolute',
+                border: '2px solid #000',
+                backgroundColor: 'gray',
+                boxShadow: '2px solid black',
+                width: '50vw',
+                height: '50vh',
+                margin: 'auto'
+            }}
+        >
+            <img  width="100%;" height="100%;" onClick={handleClose} src={modalImg} alt ="Full Screen"/>
+        </Modal>
+
     <div className = "playDiv" >
         <div className='artText'>
             <div> <h1>Computer Graphics Course</h1>  </div>
@@ -47,11 +75,12 @@ return(
                     For the first project we were given some textures and samples to work with and then told to make something with it. 
                     Then, we were tasked to try to build houses and then build something creative.
                 </div>
-                <Grid  columns={4}>
+                {window.innerWidth > 590 ?
+                <Grid columns={4}>
                     <Popup 
                         trigger={
                             <Grid.Column>
-                                <img  width="100%;" height="100%;" src={p1b1} alt ="Project 1 Basic 1"/>
+                                <img  width="100%;" height="100%;" onClick={onClickImage} src={p1b1} alt ="Project 1 Basic 1"/>
                             </Grid.Column>
                         }
                         content="This is just some random usage of textures and shapes."
@@ -60,7 +89,7 @@ return(
                     <Popup 
                         trigger={
                             <Grid.Column>
-                                <img width="100%;" height="100%;" src={p1c1} alt="Project 1 Creative 1" />
+                                <img  width="100%;" height="100%;" onClick={onClickImage} src={p1c1} alt="Project 1 Creative 1" />
                             </Grid.Column>
                         }
                         content="Robots were one was one of the suggested ideas, so instead of one I made three and added fairies to challenge myself."
@@ -69,7 +98,7 @@ return(
                     <Popup 
                         trigger={
                             <Grid.Column>
-                                <img width="100%;" height="100%;" src={p1b2} alt="Project 1 Basic 2" />
+                                <img  width="100%;" height="100%;" onClick={onClickImage} src={p1b2} alt="Project 1 Basic 2" />
                             </Grid.Column>
                         }
                         content="I belive this one actually had a boat that floated down the river."
@@ -78,13 +107,29 @@ return(
                     <Popup 
                         trigger={
                             <Grid.Column>
-                                <img width="100%;" height="100%;" src={p1c2} alt="Project 1 Creative 2" />
+                                <img  width="100%;" height="100%;" onClick={onClickImage} src={p1c2} alt="Project 1 Creative 2" />
                             </Grid.Column>
                         }
                         content="This one looked really nice, I managed to get the highlights of the sky on the buildings and trees. The stars were different every time the program ran."
                         position="top center"
                     />
                 </Grid>
+                :
+                <Grid columns={4}>
+                    <Grid.Column>
+                        <img  width="100%;" height="100%;" onClick={onClickImage} src={p1b1} alt ="Project 1 Basic 1"/>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <img  width="100%;" height="100%;" onClick={onClickImage} src={p1c1} alt="Project 1 Creative 1" />
+                    </Grid.Column>
+                    <Grid.Column>
+                        <img  width="100%;" height="100%;" onClick={onClickImage} src={p1b2} alt="Project 1 Basic 2" />
+                    </Grid.Column>
+                    <Grid.Column>
+                        <img  width="100%;" height="100%;" onClick={onClickImage} src={p1c2} alt="Project 1 Creative 2" />
+                    </Grid.Column>
+                </Grid>
+                }
             </div>
             
             <div className='section'>
@@ -92,11 +137,12 @@ return(
                     The next project was all about recreating images with math. The first part being just circles and the second 
                     part was to draw sided shapes inside sided shapes that you can change with a menu. 
                 </div>
-                <Grid  columns={4}>
+                {window.innerWidth > 590 ?
+                <Grid columns={4}>
                     <Popup 
                         trigger={
                             <Grid.Column>
-                                <img  width="100%;" height="100%;" src={p21} alt ="Project 2.1"/>
+                                <img  width="100%;" height="100%;" onClick={onClickImage} src={p21} alt ="Project 2.1"/>
                             </Grid.Column>
                         }
                         content="This one was just making the dino have the same orientation as if its on a circle."
@@ -105,7 +151,7 @@ return(
                     <Popup 
                         trigger={
                             <Grid.Column>
-                                <img width="100%;" height="100%;" src={p22} alt="Project 2.2" />
+                                <img  width="100%;" height="100%;" onClick={onClickImage} src={p22} alt="Project 2.2" />
                             </Grid.Column>
                         }
                         content="This one was more like a puzzle, I knew how to make circles so how do I draw this with just circles."
@@ -114,7 +160,7 @@ return(
                     <Popup 
                         trigger={
                             <Grid.Column>
-                                <img width="100%;" height="100%;" src={p231} alt="Project 2.3.1" />
+                                <img  width="100%;" height="100%;" onClick={onClickImage} src={p231} alt="Project 2.3.1" />
                             </Grid.Column>
                         }
                         content="This one and the next one makes 'stickers', you can paste them all over the page. You can change them and the color in the submenu!"
@@ -123,13 +169,29 @@ return(
                     <Popup 
                         trigger={
                             <Grid.Column>
-                                <img width="100%;" height="100%;" src={p232} alt="Project 2.3.2" />
+                                <img  width="100%;" height="100%;" onClick={onClickImage} src={p232} alt="Project 2.3.2" />
                             </Grid.Column>
                         }
                         content="Because I'm an overachiever (and like everything organized) you can even change the background to match your color choices better and clear the screen."
                         position="top center"
                     />
                 </Grid>
+                :
+                <Grid columns={4}>
+                    <Grid.Column>
+                        <img  width="100%;" height="100%;" onClick={onClickImage} src={p21} alt ="Project 2.1"/>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <img  width="100%;" height="100%;" onClick={onClickImage} src={p22} alt="Project 2.2" />
+                    </Grid.Column>
+                    <Grid.Column>
+                        <img  width="100%;" height="100%;" onClick={onClickImage} src={p231} alt="Project 2.3.1" />
+                    </Grid.Column>
+                    <Grid.Column>
+                        <img  width="100%;" height="100%;" onClick={onClickImage} src={p232} alt="Project 2.3.2" />
+                    </Grid.Column>
+                </Grid>
+                }
             </div>
 
             <div className='section'>
@@ -137,11 +199,12 @@ return(
                     Next project was all about making trees with math. I made a lot of trees, too many trees if you ask me, 
                     I'll only give you a basic summer tree and then three of the other creative seasons.
                 </div>
-                <Grid  columns={4}>
+                {window.innerWidth > 590 ?
+                <Grid columns={4}>
                     <Popup 
                         trigger={
                             <Grid.Column>
-                                <img  width="100%;" height="100%;" src={p31} alt ="Project 3.1"/>
+                                <img  width="100%;" height="100%;" onClick={onClickImage} src={p31} alt ="Project 3.1"/>
                             </Grid.Column>
                         }
                         content="This is the summer tree (technically its not the basic tree but it is in the black void of testing)."
@@ -150,7 +213,7 @@ return(
                     <Popup 
                         trigger={
                             <Grid.Column>
-                                <img width="100%;" height="100%;" src={p32} alt="Project 3.2" />
+                                <img  width="100%;" height="100%;" onClick={onClickImage} src={p32} alt="Project 3.2" />
                             </Grid.Column>
                         }
                         content="This is the Spring Creative, I make 4 different versions."
@@ -159,7 +222,7 @@ return(
                     <Popup 
                         trigger={
                             <Grid.Column>
-                                <img width="100%;" height="100%;" src={p33} alt="Project 3.3" />
+                                <img  width="100%;" height="100%;" onClick={onClickImage} src={p33} alt="Project 3.3" />
                             </Grid.Column>
                         }
                         content="This one is the fall creative."
@@ -168,13 +231,29 @@ return(
                     <Popup 
                         trigger={
                             <Grid.Column>
-                                <img width="100%;" height="100%;" src={p34} alt="Project 3.4" />
+                                <img  width="100%;" height="100%;" onClick={onClickImage} src={p34} alt="Project 3.4" />
                             </Grid.Column>
                         }
                         content="This one's the winter creative."
                         position="top center"
                     />
                 </Grid>
+                :
+                <Grid columns={4}>
+                    <Grid.Column>
+                        <img  width="100%;" height="100%;" onClick={onClickImage} src={p31} alt ="Project 3.1"/>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <img  width="100%;" height="100%;" onClick={onClickImage} src={p32} alt="Project 3.2" />
+                    </Grid.Column>
+                    <Grid.Column>
+                        <img  width="100%;" height="100%;" onClick={onClickImage} src={p33} alt="Project 3.3" />
+                    </Grid.Column>
+                    <Grid.Column>
+                        <img  width="100%;" height="100%;" onClick={onClickImage} src={p34} alt="Project 3.4" />
+                    </Grid.Column>
+                </Grid>
+                }
             </div>
 
             <div className='section'>
@@ -184,11 +263,12 @@ return(
                     part of this project is creating a tepot color hue where you can move the light and see how it works and 
                     rotate the teapots.
                 </div>
-                <Grid  columns={4}>
+                {window.innerWidth > 590 ?
+                <Grid columns={4}>
                     <Popup 
                         trigger={
                             <Grid.Column>
-                                <img  width="100%;" height="100%;" src={p41} alt ="Project 4.1"/>
+                                <img  width="100%;" height="100%;" onClick={onClickImage} src={p41} alt ="Project 4.1"/>
                             </Grid.Column>
                         }
                         content="This one is the basic 3D house, I also have this in different colors"
@@ -197,7 +277,7 @@ return(
                     <Popup 
                         trigger={
                             <Grid.Column>
-                                <img width="100%;" height="100%;" src={p42} alt="Project 4.2" />
+                                <img  width="100%;" height="100%;" onClick={onClickImage} src={p42} alt="Project 4.2" />
                             </Grid.Column>
                         }
                         content="This is the Creative 3D house with shadows."
@@ -229,6 +309,28 @@ return(
                         position="top center"
                     />
                 </Grid>
+                :
+                <Grid columns={4}>
+                    <Grid.Column>
+                        <img  width="100%;" height="100%;" onClick={onClickImage} src={p41} alt ="Project 4.1"/>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <img  width="100%;" height="100%;" onClick={onClickImage} src={p42} alt="Project 4.2" />
+                    </Grid.Column>
+                    <Grid.Column>
+                        <video width="100%;" height="100%;" controls>
+                            <source src={p43} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <video width="100%;" height="100%;" controls>
+                            <source src={p44} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </Grid.Column>
+                </Grid>
+                }
             </div>
 
             <div className='section'>

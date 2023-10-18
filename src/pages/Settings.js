@@ -100,7 +100,7 @@ function Settings (){
 			<MenuBar  />
 			<Links props={ls} />
 			<div className = "settingsDiv">
-				<div className='artText'>
+				<div className='settingsText'>
 					<div><h1>Settings</h1></div>
 				</div>
 				<div className='smallerSection centered'>

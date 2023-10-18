@@ -29,7 +29,7 @@ function Play(){
                     <Popup 
                         trigger={
                             <Grid.Column>
-                                <PlayerCard Name="A Journey Home" Image={AJH}  Url = "https://kimberlymodeste.github.io/AJourneyHomeJS"/>
+                                <PlayerCard Name="A Journey Home" Image={AJH} target="_blank" Url="https://kimberlymodeste.github.io/AJourneyHomeJS"/>
                             </Grid.Column>
                         }
                         content="A text-based game that is based on the game The Oregon Trail"
@@ -38,7 +38,7 @@ function Play(){
                     <Popup 
                         trigger={
                             <Grid.Column>
-                                <PlayerCard Name="Mooreland Properties" Image={MP} Url = "https://smoothstack35-dev-ed.develop.my.site.com/accountportal/s/"/>
+                                <PlayerCard Name="Mooreland Properties" Image={MP} target="_blank" Url="https://smoothstack35-dev-ed.develop.my.site.com/accountportal/s/"/>
                             </Grid.Column>
                         }
                         content="Mooreland Properties: The application for renting, buying and managing properties"
@@ -47,7 +47,7 @@ function Play(){
                     <Popup 
                         trigger={
                             <Grid.Column>
-                                <PlayerCard Name="Synesthesia" Image={Syn} Url = "https://kimberlymodeste.github.io/Synesthesia/Build/WebBuild/index.html"/>
+                                <PlayerCard Name="Synesthesia" Image={Syn} target="_blank" Url="https://kimberlymodeste.github.io/Synesthesia/Build/WebBuild/index.html"/>
                             </Grid.Column>
                         }
                         content="A dialogue-based game that teaches players the basics on how to play the piano"
