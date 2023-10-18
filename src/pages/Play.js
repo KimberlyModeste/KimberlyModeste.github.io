@@ -19,7 +19,8 @@ function Play(){
             <div className="playDiv">
                 <div className="gamesText">
                     <h1>Projects</h1>
-                    <p classname="gameDescText">These are some of the games and projects that I worked on. <br/>
+                    <p className="gameDescText">
+                        These are some of the games and projects that I worked on.
                         Some of these are projects I worked on as a group and others
                         are ones that I worked on by myself.
                     </p>
@@ -28,7 +29,7 @@ function Play(){
                     <Popup 
                         trigger={
                             <Grid.Column>
-                                <PlayerCard Name="A Journey Home" Image={AJH} Url = "https://kimberlymodeste.github.io/AJourneyHomeJS"/>
+                                <PlayerCard Name="A Journey Home" Image={AJH}  Url = "https://kimberlymodeste.github.io/AJourneyHomeJS"/>
                             </Grid.Column>
                         }
                         content="A text-based game that is based on the game The Oregon Trail"
@@ -37,10 +38,10 @@ function Play(){
                     <Popup 
                         trigger={
                             <Grid.Column>
-                                <PlayerCard className="pcard" Name="Mooreland Properties" Image={MP} Url = "https://smoothstack35-dev-ed.develop.my.site.com/accountportal/s/"/>
+                                <PlayerCard Name="Mooreland Properties" Image={MP} Url = "https://smoothstack35-dev-ed.develop.my.site.com/accountportal/s/"/>
                             </Grid.Column>
                         }
-                        content="Mooreland Properties: the application for renting, buying and managing properties"
+                        content="Mooreland Properties: The application for renting, buying and managing properties"
                         position="top center"
                     />
                     <Popup 
@@ -55,7 +56,13 @@ function Play(){
                 </Grid>
             </div>
             <div className="playDiv">
-                <h1 className="artText">Fun Art</h1>
+            <div className="artText">
+                    <h1>Fun Art</h1>
+                    <p className="gameDescText">
+                        So far this is just my computer graphics class stuff
+                    </p>
+                </div>
+                {/* <h1 className="artText">Fun Art</h1> */}
                 <Grid centered columns={5}>
                     <Popup 
                         trigger={

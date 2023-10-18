@@ -11,7 +11,6 @@ const MenuBar = (props) => {
     const [width, setWidth] = useState(window.innerWidth);
 
     let path = pathname.split('/').length > 1 ? pathname.split('/')[1] === '' ? 'home' : pathname.split('/')[1] : 'home'
-    // let path = pathname.split('/')[1] === '' ? 'home' : pathname.split('/')[1];
 
     const handleItemClick = (e, { name }) => setActiveItem(name);
     const [activeItem, setActiveItem] = useState(path);
@@ -66,7 +65,7 @@ const MenuBar = (props) => {
     }
 
     return (
-        width > 450?
+        width > 590 ? //450?
             props.inverted?
             //If Bigger Width and Inverted
             <Menu pointing secondary inverted color="grey" size="large" >

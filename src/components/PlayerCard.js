@@ -4,8 +4,8 @@ import {Card, Image} from 'semantic-ui-react'
 const PlayerCard = (props) => {
 
 	return (
-			<Card href={props.Url}>
-				<Card.Content>
+			<Card className='pcard' href={props.Url} target="_blank">
+				<Card.Content className='pcard-content'>
 					<Card.Description>
 						{props.Name}
 					</Card.Description>

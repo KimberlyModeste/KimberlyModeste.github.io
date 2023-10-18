@@ -107,7 +107,7 @@ function Settings (){
 					<label
 					style={{
 						padding: '10px',
-						fontSize: '20px'
+						fontSize: '2vw'
 					}}> Turn {check? 'Off' : 'On' } Links </label>
 					<input 
 						style={{
@@ -123,7 +123,7 @@ function Settings (){
 					<Grid columns={4} centered>
 						<Grid.Column>
 							<div className='centered' width="100%;" height="100%;">
-								<label style={{ padding: '10px', fontSize: '15px'}}> Madame Lavender </label>
+								<label style={{ padding: '10px', fontSize: '1.4vw'}}> Madame Lilac </label>
 								<input 
 									style={{
 										textAlign:'center'
@@ -137,7 +137,7 @@ function Settings (){
 						</Grid.Column>
 						<Grid.Column>
 							<div className='centered' width="100%;" height="100%;">
-								<label style={{ padding: '10px', fontSize: '17px'}}> Crimson Rose </label>
+								<label style={{ padding: '10px', fontSize: '1.4vw'}}> Crimson Rose </label>
 								<input 
 									style={{
 										textAlign:'center'
@@ -151,7 +151,7 @@ function Settings (){
 						</Grid.Column>
 						<Grid.Column>
 							<div className='centered' width="100%;" height="100%;">
-								<label style={{ padding: '10px', fontSize: '17px'}}> Vinny Desert </label>
+								<label style={{ padding: '10px', fontSize: '1.5vw'}}> Vinny Desert </label>
 								<input 
 									style={{
 										textAlign:'center'
@@ -165,7 +165,7 @@ function Settings (){
 						</Grid.Column>
 						<Grid.Column>
 							<div className='centered' width="100%;" height="100%;">
-								<label style={{ padding: '10px', fontSize: '17px'}}> Type: Null </label>
+								<label style={{ padding: '10px', fontSize: '1.5vw'}}> Type: Null </label>
 								<input 
 									style={{
 										textAlign:'center'
@@ -182,7 +182,7 @@ function Settings (){
 					<Grid columns={1} centered>
 						<Grid.Column>
 							<div className='centered' width="100%;" height="100%;">
-								<label style={{ padding: '10px', fontSize: '17px'}}> Random </label>
+								<label style={{ padding: '10px', fontSize: '1.5vw'}}> Random </label>
 								<input 
 									style={{
 										textAlign:'center'
@@ -198,7 +198,7 @@ function Settings (){
 					<Grid columns={1} centered>
 						<Grid.Column>
 							<div className='centered' width="100%;" height="100%;">
-								<label style={{ padding: '10px', fontSize: '17px'}}> Enter Code </label>
+								<label style={{ padding: '10px', fontSize: '1.5vw'}}> Enter Code </label>
 								<input 
 									id='codeInput'
 									style={{
@@ -209,7 +209,13 @@ function Settings (){
 									}}
 									type="text"
 								/>
-								<button onClick={codeUpdate} type='button'>Submit</button>
+								{window.innerWidth < 590?
+								<div style={{padding: '15px'}}>
+									<button onClick={codeUpdate} type='button'>Submit</button>
+								</div>
+								:
+								<button onClick={codeUpdate} type='button'>Submit</button>}
+								
 
 							</div>
 						</Grid.Column>
