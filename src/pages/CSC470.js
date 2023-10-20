@@ -28,23 +28,33 @@ import p51 from '../resources/BoxGhost.mp4'
 import p52 from '../resources/BoxLightBoxBetter.mp4'
 import p53 from '../resources/LostSouls.mp4'
 import p54 from '../resources/FireSprites.mp4'
-import { useEffect } from 'react';
 
 
 function CSC470(){
 	
     const[showModal, setModal] = useState(false)
+    const[showModalVid, setModalV] = useState(false)
     const[modalImg, setModalImg] = useState('https://react.semantic-ui.com/images/wireframe/image.png')
+    const[modalVid, setModalVid] = useState('https://react.semantic-ui.com/images/wireframe/image.png')
+    const width = window.innerWidth
+    const height = window.innerHeight
 
     function onClickImage (name){
         setModal(true)
         setModalImg(name.target.currentSrc)
 
     }
+    function onClickVideo (name){
+        setModalV(true)
+        setModalVid(name.target.currentSrc)
+
+    }
     function handleClose(){
         setModal(false)
     }
-    
+    function handleCloseVid(){
+        setModalV(false)
+    }
 
 return(
     <div> 
@@ -55,15 +65,35 @@ return(
             open={showModal}
             style={{
                 position: 'absolute',
-                border: '2px solid #000',
-                backgroundColor: 'gray',
-                boxShadow: '2px solid black',
-                width: '50vw',
-                height: '50vh',
-                margin: 'auto'
+                backgroundColor: 'rgba(1,1,1,0)',
+                boxShadow:'none',
+                width: (width > height? height : width),
+                height: (height > width? width : height),
+                padding: '20px',
+                margin: 'auto',
+                
             }}
         >
-            <img  width="100%;" height="100%;" onClick={handleClose} src={modalImg} alt ="Full Screen"/>
+            <img width="100%;" height="100%;" onClick={handleClose} src={modalImg} alt ="Full Screen"/>
+        </Modal>
+        <Modal
+            onClose={handleCloseVid}
+            open={showModalVid}
+            style={{
+                position: 'absolute',
+                backgroundColor: 'rgba(1,1,1,0)',
+                boxShadow:'none',
+                width: (width > height? height : width),
+                height: (height > width? width : height),
+                padding: '20px',
+                margin: 'auto',
+                
+            }}
+        >
+            <video width="100%;" height="100%;" controls>
+                <source src={modalVid} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
         </Modal>
 
     <div className = "playDiv" >
@@ -318,13 +348,13 @@ return(
                         <img  width="100%;" height="100%;" onClick={onClickImage} src={p42} alt="Project 4.2" />
                     </Grid.Column>
                     <Grid.Column>
-                        <video width="100%;" height="100%;" controls>
+                        <video width="100%;" height="100%;"  onClick={onClickVideo}>
                             <source src={p43} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                     </Grid.Column>
                     <Grid.Column>
-                        <video width="100%;" height="100%;" controls>
+                        <video width="100%;" height="100%;"  onClick={onClickVideo}>
                             <source src={p44} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
@@ -340,7 +370,8 @@ return(
                     had one line stating that it was supposed to be 3D so last minute I fixed up my previous iterations. 
                     I'll also add my 2D project that I tried to do.
                 </div>
-                <Grid  columns={4}>
+                {window.innerWidth > 590 ?
+                <Grid columns={4}>
                     <Popup 
                         trigger={
                             <Grid.Column>
@@ -393,6 +424,34 @@ return(
                         position="top center"
                     />
                 </Grid>
+                :
+                <Grid columns={4}>
+                    <Grid.Column>
+                        <video width="100%;" height="100%;" onClick={onClickVideo}>
+                            <source src={p51} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <video width="100%;" height="100%;" onClick={onClickVideo}>
+                            <source src={p52} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <video width="100%;" height="100%;" onClick={onClickVideo}>
+                            <source src={p53} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <video width="100%;" height="100%;" onClick={onClickVideo}>
+                            <source src={p54} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </Grid.Column>
+            </Grid>
+            }
             </div>
         </div>
     

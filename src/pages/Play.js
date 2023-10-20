@@ -59,7 +59,9 @@ function Play(){
             <div className="artText">
                     <h1>Fun Art</h1>
                     <p className="gameDescText">
-                        So far this is just my computer graphics class stuff
+                        So far this I only have random images I created in my computer 
+                        graphics class. Maybe in the future I'll put some behind the
+                        scenes game graphics or pictures that I drew. We'll See. 
                     </p>
                 </div>
                 {/* <h1 className="artText">Fun Art</h1> */}
