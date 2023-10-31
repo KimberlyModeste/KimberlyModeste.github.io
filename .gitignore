@@ -25,3 +25,6 @@ yarn-debug.log*
 yarn-error.log*
 >>>>>>> parent of fc7228e1 (Updates)
 node_modules
+
+#api
+.env

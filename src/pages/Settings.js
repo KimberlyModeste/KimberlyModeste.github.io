@@ -89,9 +89,11 @@ function Settings (){
 	}
 
 	function codeUpdate(){
-		let code = document.getElementById("codeInput").value
+		let enteredCode = document.getElementById("codeInput").value
 		document.getElementById("codeInput").value =''
-		console.log(code)
+
+		let noArray = ["Nope", "Thats not it", "No", "Not correct"]
+		enteredCode === process.env.REACT_APP_WEBSITE_CODE ? console.log("Unlocked") : console.log(noArray[Math.floor(Math.random()*noArray.length)])
 	}
 
 	
