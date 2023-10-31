@@ -7,7 +7,6 @@ import { Grid } from "semantic-ui-react";
 let {LinkSettings}  = require('../modules/modSettings')
 
 
-
 function Settings (){
 
 	let ls={
@@ -107,7 +106,7 @@ function Settings (){
 				</div>
 				<div className='smallerSection centered'>
 					<label
-					style={{
+					style ={{
 						padding: '10px',
 						fontSize: '2vw'
 					}}> Turn {check? 'Off' : 'On' } Links </label>
@@ -181,7 +180,7 @@ function Settings (){
 						</Grid.Column>
 					</Grid>
 
-					<Grid columns={1} centered>
+					<Grid columns={LinkSettings.isHoliday ? 2 : 1} centered>
 						<Grid.Column>
 							<div className='centered' width="100%;" height="100%;">
 								<label style={{ padding: '10px', fontSize: '1.5vw'}}> Random </label>
@@ -196,6 +195,25 @@ function Settings (){
 								/>
 							</div>
 						</Grid.Column>
+						{LinkSettings.isHoliday ? 
+						<Grid.Column>
+						<div className='centered' width="100%;" height="100%;">
+							<label style={{ padding: '10px', fontSize: '1.5vw'}}> Holiday </label>
+							<input 
+								style={{
+									textAlign:'center'
+								}}
+								type="checkbox"
+								value={5}
+								checked={theme === 5}
+								onChange={updateTheme}
+							/>
+						</div>
+					</Grid.Column>
+					:
+					<></>	
+					}
+						
 					</Grid>
 					<Grid columns={1} centered>
 						<Grid.Column>
