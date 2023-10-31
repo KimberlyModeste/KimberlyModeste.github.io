@@ -50,7 +50,16 @@ const MenuBar = (props) => {
     
         return "#"+RR+GG+BB;
     }
-    
+
+    function isSpectrum ()
+    {
+        let color = LinkSettings.backgroundColor
+        var R = parseInt(color.substring(1,3),16);
+        var G = parseInt(color.substring(3,5),16);
+        var B = parseInt(color.substring(5,7),16);
+
+        return (R*0.299 + G*0.587 + B*0.114) > 150//186 //use #000000 else use #ffffff
+    }
 
     if(props.inverted)
     {
@@ -59,11 +68,12 @@ const MenuBar = (props) => {
     }
     else
     {
-
         let foot = document.getElementById('footer-container');
         foot.style.backgroundColor = shadeColor(LinkSettings.particleColor, 30)
+
     }
 
+    
     return (
         width > 590 ? //450?
             props.inverted?
@@ -126,14 +136,18 @@ const MenuBar = (props) => {
             </Menu>
                 :
             //If Bigger Width and not Inverted
-            <Menu className='fullNavBar' pointing secondary color={props.inverted? "grey" : ""} size="large" >
+            <Menu className='fullNavBar' pointing secondary size="large" >
                 <Menu.Menu position="left">
-                <Menu.Item name = "home"
+                <Menu.Item 
+                style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
+                name = "home"
                 active={activeItem === 'home'}
                 onClick={handleItemClick}
                 as={Link} to="/" />
                 
-                <Menu.Item name = "play"
+                <Menu.Item 
+                style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
+                name = "play"
                 active={activeItem === 'play'}
                 onClick={handleItemClick}
                 as={Link} to="/play">   
@@ -144,7 +158,7 @@ const MenuBar = (props) => {
                 </Menu.Menu>
                 
                 <Menu.Menu position="right">
-                <p id='navbarName' > 
+                <p id='navbarName' style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}} > 
                 <Icon name='laptop'  color={props.inverted? props.color : "white"} /> 
                 <Icon name='language'  color={props.inverted? props.color : "white"} /> 
                 
@@ -155,20 +169,25 @@ const MenuBar = (props) => {
                 </Menu.Menu>
 
                 <Menu.Menu position="right">
-                    <Menu.Item  name = "Github"
+                    <Menu.Item  
+                    style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
+                    name = "Github"
                     href='https://github.com/KimberlyModeste'
                     target='_blank'>
                     <Icon name='github' size='large'/>
                     </Menu.Item>
                     
                     <Menu.Item 
+                    style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
                     name = "LinkedIn"
                     href='https://www.linkedin.com/in/kimberly-modeste1'
                     target='_blank'>
                     <Icon name='linkedin' size='large'/>
                     </Menu.Item>
                     
-                    <Menu.Item name = "master_resume"
+                    <Menu.Item 
+                    style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
+                    name = "master_resume"
                     active={activeItem === 'master_resume'}
                     onClick={handleItemClick}
                     as={Link} to="/master_resume.pdf" >
@@ -176,7 +195,9 @@ const MenuBar = (props) => {
                     <Icon name='file alternate outline' size='large'/>
                     </Menu.Item>
 
-                    <Menu.Item name = "settings"
+                    <Menu.Item 
+                    style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
+                    name = "settings"
                     active={activeItem === 'settings'}
                     onClick={handleItemClick}
                     as={Link} to="/settings" >
@@ -243,6 +264,7 @@ const MenuBar = (props) => {
             <Menu className='fullNavBar' pointing secondary color={props.inverted? "grey" : ""} size="large" >
                 <Menu.Menu position="left">
                 <Menu.Item 
+                    style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
                     name = "home"
                     active={activeItem === 'home'}
                     onClick={handleItemClick}
@@ -251,6 +273,7 @@ const MenuBar = (props) => {
                 </Menu.Item>
                 
                 <Menu.Item 
+                    style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
                     name = "play"
                     active={activeItem === 'play'}
                     onClick={handleItemClick}
@@ -261,20 +284,25 @@ const MenuBar = (props) => {
                 </Menu.Menu>
 
                 <Menu.Menu position="right">
-                    <Menu.Item  name = "Github"
+                    <Menu.Item 
+                    style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
+                    name = "Github"
                     href='https://github.com/KimberlyModeste'
                     target='_blank'>
                     <Icon name='github' />
                     </Menu.Item>
                     
                     <Menu.Item 
+                    style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
                     name = "LinkedIn"
                     href='https://www.linkedin.com/in/kimberly-modeste1'
                     target='_blank'>
                     <Icon name='linkedin'/>
                     </Menu.Item>
                     
-                    <Menu.Item name = "master_resume"
+                    <Menu.Item 
+                    style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
+                    name = "master_resume"
                     active={activeItem === 'master_resume'}
                     onClick={handleItemClick}
                     as={Link} to="/master_resume.pdf" >
@@ -282,7 +310,9 @@ const MenuBar = (props) => {
                     <Icon name='file alternate outline' />
                     </Menu.Item>
 
-                    <Menu.Item name = "settings"
+                    <Menu.Item 
+                    style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
+                    name = "settings"
                     active={activeItem === 'settings'}
                     onClick={handleItemClick}
                     as={Link} to="/settings" >

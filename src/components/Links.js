@@ -1,10 +1,16 @@
 import React from "react";
 import Particles from "react-tsparticles";
+
+import halloween from "../resources/Pumpkin.svg"
+
 let {LinkSettings}  = require('../modules/modSettings')
 
 let bgColor = LinkSettings.backgroundColor
 let partColor = LinkSettings.particleColor
 let isParticles = LinkSettings.particlesOn
+let holidayImg = ""
+
+
 
 const Link = (props) => {
 
@@ -24,8 +30,16 @@ const Link = (props) => {
         isParticles = temp.particlesOn
       }
     }
+
+    let today = new Date()
+    if(today.getMonth() === 9 && today.getDate() === 31)
+    {
+      holidayImg = halloween
+    }
+
   }
 
+  
   
   updateLinks()
   const particlesInit = (main) => {
@@ -81,6 +95,7 @@ const Link = (props) => {
                   },
                 },
               },
+
               particles: {
                 color: {
                   value: partColor,
@@ -113,12 +128,24 @@ const Link = (props) => {
                 opacity: {
                   value: 0.5,
                 },
+                // image: {
+                //   gif: true,
+                //   height: 200,
+                //   src: "https://particles.js.org/images/mario.gif",
+                //   width: 200
+                // },
                 shape: {
-                  type: "circle",
+                  type: "image",
+                  image: 
+                  {
+                      src: holidayImg,
+                      width: 100,
+                      height: 100,
+                    },
                 },
                 size: {
                   random: true,
-                  value: 5,
+                  value: 10,
                 },
               },
               detectRetina: false,

@@ -43,8 +43,8 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 #myIcon.icon{
-  color: white !important;
-  mix-blend-mode: difference;
+  /* color: white !important;
+  mix-blend-mode: difference; */
 }
 
 #navbarName {
@@ -53,8 +53,8 @@ a, a:hover, a:active, a:visited, a:focus {
   font-family: sans-serif;
   font-weight: 100;
   font-size: larger;
-  color: white;
-  mix-blend-mode: difference;
+  /* color: white;
+  mix-blend-mode: difference; */
   margin: auto;
   margin-right: inherit;
 }
@@ -147,17 +147,17 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .ui.secondary.pointing.menu .item {
-  color: white;
-  mix-blend-mode: difference;
+  
+  /* color: white; */
 }
 
 .ui.secondary.pointing.menu  .active.item {
-  border-color:  rgb(180, 180, 180) !important;
-  mix-blend-mode: difference;
+  /* border-color:  rgb(180, 180, 180) !important;
+  mix-blend-mode: difference; */
 }
 .ui.secondary.pointing.menu  .active.item ,.item:hover {
-  color: rgb(180, 180, 180) !important;
-  mix-blend-mode: difference;
+  /* color: rgb(180, 180, 180) !important;
+  mix-blend-mode: difference; */
 }
 
 .ui.inverted.menu .grey.active.item, .ui.inverted.grey.menu {

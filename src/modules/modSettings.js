@@ -4,7 +4,7 @@ let LinkSettings = {
 	particleColor: "#59065f",
 	particlesOn: true,
 	themes: 0,
-	isHoliday: false
+	isHoliday: false,
 };
 
 if(date.getMonth() === 9 && date.getDate() === 31)
