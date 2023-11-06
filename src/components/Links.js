@@ -1,14 +1,24 @@
 import React from "react";
 import Particles from "react-tsparticles";
 
-import halloween from "../resources/Pumpkin.svg"
+import pumpkin from "../resources/Pumpkin.svg"
+import spider from  "../resources/spider.png"
+
+import leaf1 from "../resources/leaves1.png"
+import leaf2 from "../resources/leaves2.png"
+import leaf3 from "../resources/leaves3.png"
+import leaf4 from "../resources/leaves4.png"
+import leaf5 from "../resources/leaves5.png"
+import leaf6 from "../resources/leaves6.png"
+
 
 let {LinkSettings}  = require('../modules/modSettings')
 
 let bgColor = LinkSettings.backgroundColor
 let partColor = LinkSettings.particleColor
 let isParticles = LinkSettings.particlesOn
-let holidayImg = ""
+let thisHoliday = ""
+let holidayImg = []
 
 
 
@@ -32,9 +42,26 @@ const Link = (props) => {
     }
 
     let today = new Date()
-    if(today.getMonth() === 9 && today.getDate() === 31)
+    let tg = new Date(today.getFullYear(), 10, 1)
+    tg.setDate(tg.getDay() !== 4 ? (tg.getDate()+1 + ((8 - tg.getDate())% 7))+21 : tg.getDate()+21)
+
+
+    if(today.getMonth() === 9 && today.getDate() <= 31)
     {
-      holidayImg = halloween
+      thisHoliday = "halloween"
+      holidayImg.push(pumpkin)
+      holidayImg.push(spider)
+    }
+    else if(today.getMonth() === 10 && today.getDate() <= tg.getDate())
+    {
+      thisHoliday = "thanksgiving"
+      
+      holidayImg.push(leaf1)
+      holidayImg.push(leaf2)
+      holidayImg.push(leaf3)
+      holidayImg.push(leaf4)
+      holidayImg.push(leaf5)
+      holidayImg.push(leaf6)
     }
 
   }
@@ -51,7 +78,6 @@ const Link = (props) => {
   const particlesLoaded = (container) => {
     // console.log(container);
   };
-
   if(isParticles)
   {
     return (
@@ -128,24 +154,63 @@ const Link = (props) => {
                 opacity: {
                   value: 0.5,
                 },
-                // image: {
-                //   gif: true,
-                //   height: 200,
-                //   src: "https://particles.js.org/images/mario.gif",
-                //   width: 200
-                // },
                 shape: {
-                  type: "image",
-                  image: 
-                  {
-                      src: holidayImg,
+                  type: LinkSettings.isHoliday ? "images" : "",
+                  images: 
+                  thisHoliday === "halloween" ?
+                  [
+                    {
+                      src: holidayImg[0],
                       width: 100,
                       height: 100,
                     },
+                    {
+                      src: holidayImg[1],
+                      width: 100,
+                      height: 100,
+                    },
+                  
+                  ]
+                  :
+                  thisHoliday === "thanksgiving" ?
+                  [ 
+                    {
+                      src: holidayImg[0],
+                      width: 100,
+                      height: 100,
+                    },
+                    {
+                      src: holidayImg[1],
+                      width: 100,
+                      height: 100,
+                    },
+                    {
+                      src: holidayImg[2],
+                      width: 100,
+                      height: 100,
+                    },
+                    {
+                      src: holidayImg[3],
+                      width: 100,
+                      height: 100,
+                    },
+                    {
+                      src: holidayImg[4],
+                      width: 100,
+                      height: 100,
+                    },
+                    {
+                      src: holidayImg[5],
+                      width: 100,
+                      height: 100,
+                    },
+                  ]
+                  :
+                  []
                 },
                 size: {
                   random: true,
-                  value: 10,
+                  value: 30,
                 },
               },
               detectRetina: false,

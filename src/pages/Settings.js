@@ -95,6 +95,7 @@ function Settings (){
 		enteredCode === process.env.REACT_APP_WEBSITE_CODE ? console.log("Unlocked") : console.log(noArray[Math.floor(Math.random()*noArray.length)])
 	}
 
+	console.log(LinkSettings.isHoliday)
 	
 	return (
 		<div>

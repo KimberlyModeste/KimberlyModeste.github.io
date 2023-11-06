@@ -51,31 +51,21 @@ const MenuBar = (props) => {
         return "#"+RR+GG+BB;
     }
 
-    function isSpectrum ()
+    function isSpectrum (color)
     {
-        let color = LinkSettings.backgroundColor
         var R = parseInt(color.substring(1,3),16);
         var G = parseInt(color.substring(3,5),16);
         var B = parseInt(color.substring(5,7),16);
 
-        return (R*0.299 + G*0.587 + B*0.114) > 150//186 //use #000000 else use #ffffff
+        return (R*0.299 + G*0.587 + B*0.114) > 150
     }
 
-    if(props.inverted)
-    {
-        let foot = document.getElementById('footer-container');
-        foot.style.backgroundColor ="black"     
-    }
-    else
-    {
-        let foot = document.getElementById('footer-container');
-        foot.style.backgroundColor = shadeColor(LinkSettings.particleColor, 30)
-
-    }
-
+    document.documentElement.style.setProperty("--particle-color", props.inverted ? "black" : shadeColor(LinkSettings.particleColor, 30))
+    document.documentElement.style.setProperty("--text-color", isSpectrum(LinkSettings.backgroundColor) ? "#000000" :"#FFFFFF")
+    document.documentElement.style.setProperty("--footer-color", isSpectrum(LinkSettings.particleColor) ? "#000000" :"#FFFFFF")
     
     return (
-        width > 590 ? //450?
+        width > 590 ? 
             props.inverted?
             //If Bigger Width and Inverted
             <Menu pointing secondary inverted color="grey" size="large" >
@@ -139,14 +129,12 @@ const MenuBar = (props) => {
             <Menu className='fullNavBar' pointing secondary size="large" >
                 <Menu.Menu position="left">
                 <Menu.Item 
-                style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
                 name = "home"
                 active={activeItem === 'home'}
                 onClick={handleItemClick}
                 as={Link} to="/" />
                 
                 <Menu.Item 
-                style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
                 name = "play"
                 active={activeItem === 'play'}
                 onClick={handleItemClick}
@@ -158,7 +146,7 @@ const MenuBar = (props) => {
                 </Menu.Menu>
                 
                 <Menu.Menu position="right">
-                <p id='navbarName' style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}} > 
+                <p id='navbarName'> 
                 <Icon name='laptop'  color={props.inverted? props.color : "white"} /> 
                 <Icon name='language'  color={props.inverted? props.color : "white"} /> 
                 
@@ -170,7 +158,6 @@ const MenuBar = (props) => {
 
                 <Menu.Menu position="right">
                     <Menu.Item  
-                    style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
                     name = "Github"
                     href='https://github.com/KimberlyModeste'
                     target='_blank'>
@@ -178,7 +165,6 @@ const MenuBar = (props) => {
                     </Menu.Item>
                     
                     <Menu.Item 
-                    style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
                     name = "LinkedIn"
                     href='https://www.linkedin.com/in/kimberly-modeste1'
                     target='_blank'>
@@ -186,7 +172,6 @@ const MenuBar = (props) => {
                     </Menu.Item>
                     
                     <Menu.Item 
-                    style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
                     name = "master_resume"
                     active={activeItem === 'master_resume'}
                     onClick={handleItemClick}
@@ -196,7 +181,6 @@ const MenuBar = (props) => {
                     </Menu.Item>
 
                     <Menu.Item 
-                    style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
                     name = "settings"
                     active={activeItem === 'settings'}
                     onClick={handleItemClick}
@@ -264,7 +248,6 @@ const MenuBar = (props) => {
             <Menu className='fullNavBar' pointing secondary color={props.inverted? "grey" : ""} size="large" >
                 <Menu.Menu position="left">
                 <Menu.Item 
-                    style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
                     name = "home"
                     active={activeItem === 'home'}
                     onClick={handleItemClick}
@@ -273,7 +256,6 @@ const MenuBar = (props) => {
                 </Menu.Item>
                 
                 <Menu.Item 
-                    style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
                     name = "play"
                     active={activeItem === 'play'}
                     onClick={handleItemClick}
@@ -285,7 +267,6 @@ const MenuBar = (props) => {
 
                 <Menu.Menu position="right">
                     <Menu.Item 
-                    style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
                     name = "Github"
                     href='https://github.com/KimberlyModeste'
                     target='_blank'>
@@ -293,7 +274,6 @@ const MenuBar = (props) => {
                     </Menu.Item>
                     
                     <Menu.Item 
-                    style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
                     name = "LinkedIn"
                     href='https://www.linkedin.com/in/kimberly-modeste1'
                     target='_blank'>
@@ -301,7 +281,6 @@ const MenuBar = (props) => {
                     </Menu.Item>
                     
                     <Menu.Item 
-                    style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
                     name = "master_resume"
                     active={activeItem === 'master_resume'}
                     onClick={handleItemClick}
@@ -311,7 +290,6 @@ const MenuBar = (props) => {
                     </Menu.Item>
 
                     <Menu.Item 
-                    style={{color: isSpectrum() ? "#000000" :"#FFFFFF"}}
                     name = "settings"
                     active={activeItem === 'settings'}
                     onClick={handleItemClick}

@@ -1,3 +1,9 @@
+:root{
+  --particle-color : "#000000";
+  --text-color: "#000000";
+  --footer-color: "#000000";
+}
+
 .App {
   text-align: center;
 }
@@ -53,14 +59,12 @@ a, a:hover, a:active, a:visited, a:focus {
   font-family: sans-serif;
   font-weight: 100;
   font-size: larger;
-  /* color: white;
-  mix-blend-mode: difference; */
+  color: var(--text-color);
   margin: auto;
   margin-right: inherit;
 }
 
 #navbarNameInv{
-
   font-family: sans-serif;
   font-weight: 100;
   font-size: larger;
@@ -101,6 +105,7 @@ a, a:hover, a:active, a:visited, a:focus {
   width: 100%;
   height: 1.5rem;
   bottom: 0.5px;
+  background-color: var(--particle-color);
 }
 
 #social-icon-link {
@@ -114,7 +119,7 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 #website-rights {
-  color: #fff;
+  color: var(--footer-color);
   position: absolute;
   font-size: large;
   bottom: 0;
@@ -147,29 +152,23 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .ui.secondary.pointing.menu .item {
-  
-  /* color: white; */
+  color: var(--text-color);
 }
 
 .ui.secondary.pointing.menu  .active.item {
-  /* border-color:  rgb(180, 180, 180) !important;
-  mix-blend-mode: difference; */
+  border-color: var(--particle-color) !important;
 }
+
 .ui.secondary.pointing.menu  .active.item ,.item:hover {
-  /* color: rgb(180, 180, 180) !important;
-  mix-blend-mode: difference; */
+  color: var(--particle-color) !important;
 }
 
 .ui.inverted.menu .grey.active.item, .ui.inverted.grey.menu {
   background-color: black !important;
 }
 
-/* .ui.card{
-  height: 100% !important;
-} */
 .ui.card:hover{
   transform: scale(1.1) !important;
-  /* padding-bottom: 100px; */
 }
 .artSection{
   padding-bottom: 30px !important;
@@ -189,6 +188,7 @@ a, a:hover, a:active, a:visited, a:focus {
     font-size: large;
 }
 .gamesText, .artText{
+  color: var(--text-color);
   text-align: center;
   padding-bottom: 50px;  
 }
