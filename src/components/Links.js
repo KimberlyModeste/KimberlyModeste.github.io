@@ -42,7 +42,6 @@ const Link = (props) => {
     }
 
     let today = new Date()
-    console.log(today.getMonth())
     let tg = new Date(today.getFullYear(), 10, 1)
     tg.setDate(tg.getDay() !== 4 ? (tg.getDate()+1 + ((8 - tg.getDate())% 7))+21 : tg.getDate()+21)
 

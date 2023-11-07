@@ -1,5 +1,4 @@
 let date = new Date()
-console.log(date)
 let LinkSettings = {
 	backgroundColor : "#e5e5fd",
 	particleColor: "#59065f",

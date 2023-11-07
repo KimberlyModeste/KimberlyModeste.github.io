@@ -22,7 +22,7 @@ return(
                 in the play tab, so feel free to check them out!  
             <br/><br/>
                 If the background makes your eyes hurt or makes it difficult to focus, you can turn it off
-                or change the color in the settings tab.
+                or change the color in the <a href='#/settings'>settings tab</a>.
             </p>
         </div>
     </p>

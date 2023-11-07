@@ -52,8 +52,6 @@ function Settings (){
 					str1+=hexCode[Math.floor(Math.random()*hexCode.length)];
 					str2+=hexCode[Math.floor(Math.random()*hexCode.length)];
 				}
-				console.log("Str 1", str1)
-				console.log("Str 2", str2)
 				setRandom(str1)
 				LinkSettings.backgroundColor = str1
 				LinkSettings.particleColor= str2
@@ -101,8 +99,6 @@ function Settings (){
 		let noArray = ["Nope", "Thats not it", "No", "Not correct"]
 		enteredCode === process.env.REACT_APP_WEBSITE_CODE ? console.log("Unlocked") : console.log(noArray[Math.floor(Math.random()*noArray.length)])
 	}
-
-	console.log(LinkSettings.isHoliday)
 	
 	return (
 		<div>
