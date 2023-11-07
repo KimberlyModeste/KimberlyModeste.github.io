@@ -219,7 +219,8 @@ function Settings (){
 					}
 						
 					</Grid>
-					<Grid columns={1} centered>
+					{/* code stuff */}
+					{/* <Grid columns={1} centered>
 						<Grid.Column>
 							<div className='centered' width="100%;" height="100%;">
 								<label style={{ padding: '10px', fontSize: '1.5vw'}}> Enter Code </label>
@@ -243,7 +244,7 @@ function Settings (){
 
 							</div>
 						</Grid.Column>
-					</Grid>
+					</Grid> */}
 									
 				</div>
 			</div>
