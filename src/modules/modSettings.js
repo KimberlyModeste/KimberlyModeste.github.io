@@ -25,6 +25,14 @@ else if (date.getMonth() === 10 && date.getDate() <= tg.getDate()){
 	LinkSettings.isHoliday = true;
 
 }
+else if (date.getMonth() === 11){
+	LinkSettings.backgroundColor = "#3FD485";
+	LinkSettings.particleColor= "#D6001C";
+	LinkSettings.themes = 5;
+	LinkSettings.isHoliday = true;
+
+}
+
 
 
 

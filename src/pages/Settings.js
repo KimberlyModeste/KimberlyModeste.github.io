@@ -60,18 +60,25 @@ function Settings (){
 				break;
 
 			case 5:
-				LinkSettings.backgroundColor = "#E8863D"
-				LinkSettings.particleColor= "#34271F"
+				let today = new Date()
+				switch(today.getMonth())
+				{
+					case 9:
+						LinkSettings.backgroundColor = "#E8863D"
+						LinkSettings.particleColor= "#34271F"
+						break;
+					case 10:
+						LinkSettings.backgroundColor = "#FBE6A7"
+						LinkSettings.particleColor= "#AB4428"
+						break;
+					case 11:
+						LinkSettings.backgroundColor = "#3FD485"
+						LinkSettings.particleColor= "#D6001C"
+						break;
+					default:
+						break;
+				}
 				break;
-			case 6:
-				LinkSettings.backgroundColor = "#E8863D"
-				LinkSettings.particleColor= "#34271F"
-				break;
-			case 7:
-				LinkSettings.backgroundColor = "#E8863D"
-				LinkSettings.particleColor= "#34271F"
-				break;
-				
 			default:
 				LinkSettings.backgroundColor = "#e5e5fd"
 				LinkSettings.particleColor= "#59065f"
