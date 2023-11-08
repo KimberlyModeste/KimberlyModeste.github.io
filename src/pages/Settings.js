@@ -21,7 +21,7 @@ function Settings (){
 	const[, setRandom] =useState("")
 
 	function updateTheme(e){
-		let temp = parseInt(e.target.value)
+		let temp = e.target.value ? parseInt(e.target.value) : parseInt(e.target.title)
 
 		switch(temp){
 		//Friend Themed
@@ -91,14 +91,6 @@ function Settings (){
 		LinkSettings.particlesOn = !check
 		setCheck(!check)
 	}
-
-	function codeUpdate(){
-		let enteredCode = document.getElementById("codeInput").value
-		document.getElementById("codeInput").value =''
-
-		let noArray = ["Nope", "Thats not it", "No", "Not correct"]
-		enteredCode === process.env.REACT_APP_WEBSITE_CODE ? console.log("Unlocked") : console.log(noArray[Math.floor(Math.random()*noArray.length)])
-	}
 	
 	return (
 		<div>
@@ -109,7 +101,7 @@ function Settings (){
 					<div><h1>Settings</h1></div>
 				</div>
 				<div className='smallerSection centered'>
-					<label
+					<label onClick={updateLinks}
 					style ={{
 						padding: '10px',
 						fontSize: '2vw'
@@ -128,7 +120,7 @@ function Settings (){
 					<Grid columns={4} centered>
 						<Grid.Column>
 							<div className='centered' width="100%;" height="100%;">
-								<label style={{ padding: '10px', fontSize: '1.4vw'}}> Madame Lilac </label>
+								<label title={0} onClick={updateTheme} style={{ padding: '10px', fontSize: '1.4vw'}}> Madame Lilac </label>
 								<input 
 									style={{
 										textAlign:'center'
@@ -142,7 +134,7 @@ function Settings (){
 						</Grid.Column>
 						<Grid.Column>
 							<div className='centered' width="100%;" height="100%;">
-								<label style={{ padding: '10px', fontSize: '1.4vw'}}> Crimson Rose </label>
+								<label title={1} onClick={updateTheme} style={{ padding: '10px', fontSize: '1.4vw'}}> Crimson Rose </label>
 								<input 
 									style={{
 										textAlign:'center'
@@ -156,7 +148,7 @@ function Settings (){
 						</Grid.Column>
 						<Grid.Column>
 							<div className='centered' width="100%;" height="100%;">
-								<label style={{ padding: '10px', fontSize: '1.5vw'}}> Vinny Desert </label>
+								<label title={2} onClick={updateTheme} style={{ padding: '10px', fontSize: '1.5vw'}}> Vinny Desert </label>
 								<input 
 									style={{
 										textAlign:'center'
@@ -170,7 +162,7 @@ function Settings (){
 						</Grid.Column>
 						<Grid.Column>
 							<div className='centered' width="100%;" height="100%;">
-								<label style={{ padding: '10px', fontSize: '1.5vw'}}> Type: Null </label>
+								<label title={3} onClick={updateTheme} style={{ padding: '10px', fontSize: '1.5vw'}}> Type: Null </label>
 								<input 
 									style={{
 										textAlign:'center'
@@ -187,7 +179,7 @@ function Settings (){
 					<Grid columns={LinkSettings.isHoliday ? 2 : 1} centered>
 						<Grid.Column>
 							<div className='centered' width="100%;" height="100%;">
-								<label style={{ padding: '10px', fontSize: '1.5vw'}}> Random </label>
+								<label title={4} onClick={updateTheme} style={{ padding: '10px', fontSize: '1.5vw'}}> Random </label>
 								<input 
 									style={{
 										textAlign:'center'
@@ -202,7 +194,7 @@ function Settings (){
 						{LinkSettings.isHoliday ? 
 						<Grid.Column>
 						<div className='centered' width="100%;" height="100%;">
-							<label style={{ padding: '10px', fontSize: '1.5vw'}}> Holiday </label>
+							<label title={5} onClick={updateTheme} style={{ padding: '10px', fontSize: '1.5vw'}}> Holiday </label>
 							<input 
 								style={{
 									textAlign:'center'
