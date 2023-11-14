@@ -74,12 +74,14 @@ function Settings (){
 						LinkSettings.particleColor= "#D6001C"
 						break;
 					default:
+						LinkSettings.backgroundColor = "#b66d65"
+						LinkSettings.particleColor= "#000000"
 						break;
 				}
 				break;
 			default:
-				LinkSettings.backgroundColor = "#e5e5fd"
-				LinkSettings.particleColor= "#59065f"
+				LinkSettings.backgroundColor = "#b66d65"
+				LinkSettings.particleColor= "#000000"
 				break;
 		}
 
