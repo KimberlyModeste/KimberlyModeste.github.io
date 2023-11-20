@@ -67,7 +67,6 @@ const Link = (props) => {
     {
       thisHoliday = "christmas"
     }
-
   }
 
   
@@ -114,22 +113,22 @@ const Link = (props) => {
                 move: {
                   angle:{
                     offset: 0,
-                    value: thisHoliday === "christmas" ? 90 : 0
+                    value: ["thanksgiving", "christmas"].includes(thisHoliday) ? 90 : 0
                   },
-                  direction: thisHoliday === "christmas" ? "bottom" :"none",
+                  direction: ["thanksgiving", "christmas"].includes(thisHoliday) ? "bottom" :"none",
                   drift: 0,
                   enable: true,
                   gravity:{
                     acceleration: thisHoliday === "christmas"? 9.81 : 0,
                     enable: false,
                     inverse: false,
-                    maxSpeed: 50
+                    maxSpeed: 0
                   },
-                  outMode:thisHoliday === "christmas" ? "out" : "bounce",
+                  outMode: ["thanksgiving", "christmas"].includes(thisHoliday) ? "out" : "bounce",
                   random: false,
                   size: false,
                   straight: false,
-                  speed: 2,
+                  speed: thisHoliday === "thanksgiving" ? {min: 1, max: 2.5} : 2,
                   vibrate: false,
                   warp: false
                 },
@@ -159,7 +158,7 @@ const Link = (props) => {
                 links: {
                   color: partColor,
                   distance: 150,
-                  enable: thisHoliday !== "christmas",
+                  enable: !["thanksgiving", "christmas"].includes(thisHoliday),
                   opacity: 0.5,
                   width: 1,
                 },
@@ -232,6 +231,7 @@ const Link = (props) => {
               detectRetina: false,
             }}
           />
+          
         );
   }
   else{
