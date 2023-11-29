@@ -21,7 +21,8 @@ function Settings (){
 	const[, setRandom] =useState("")
 
 	function updateTheme(e){
-		let temp = e.target.value ? parseInt(e.target.value) : parseInt(e.target.title)
+		console.log(e)
+		let temp = e.target.value ? parseInt(e.target.value) : parseInt(e.target.className)
 
 		switch(temp){
 		//Friend Themed
@@ -122,7 +123,7 @@ function Settings (){
 					<Grid columns={4} centered>
 						<Grid.Column>
 							<div className='centered' width="100%;" height="100%;">
-								<label title={0} onClick={updateTheme} style={{ padding: '10px', fontSize: '1.4vw'}}> Madame Lilac </label>
+								<label className={0} onMouseOver={this}  onClick={updateTheme} style={{ padding: '10px', fontSize: '1.4vw'}}> Madame Lilac </label>
 								<input 
 									style={{
 										textAlign:'center'
@@ -136,7 +137,7 @@ function Settings (){
 						</Grid.Column>
 						<Grid.Column>
 							<div className='centered' width="100%;" height="100%;">
-								<label title={1} onClick={updateTheme} style={{ padding: '10px', fontSize: '1.4vw'}}> Crimson Rose </label>
+								<label className={1} onClick={updateTheme} style={{ padding: '10px', fontSize: '1.4vw'}}> Crimson Rose </label>
 								<input 
 									style={{
 										textAlign:'center'
@@ -150,7 +151,7 @@ function Settings (){
 						</Grid.Column>
 						<Grid.Column>
 							<div className='centered' width="100%;" height="100%;">
-								<label title={2} onClick={updateTheme} style={{ padding: '10px', fontSize: '1.5vw'}}> Vinny Desert </label>
+								<label className={2} onClick={updateTheme} style={{ padding: '10px', fontSize: '1.5vw'}}> Vinny Desert </label>
 								<input 
 									style={{
 										textAlign:'center'
@@ -164,7 +165,7 @@ function Settings (){
 						</Grid.Column>
 						<Grid.Column>
 							<div className='centered' width="100%;" height="100%;">
-								<label title={3} onClick={updateTheme} style={{ padding: '10px', fontSize: '1.5vw'}}> Type: Null </label>
+								<label className={3} onClick={updateTheme} style={{ padding: '10px', fontSize: '1.5vw'}}> Type: Null </label>
 								<input 
 									style={{
 										textAlign:'center'
@@ -181,7 +182,7 @@ function Settings (){
 					<Grid columns={LinkSettings.isHoliday ? 2 : 1} centered>
 						<Grid.Column>
 							<div className='centered' width="100%;" height="100%;">
-								<label title={4} onClick={updateTheme} style={{ padding: '10px', fontSize: '1.5vw'}}> Random </label>
+								<label className={4} onClick={updateTheme} style={{ padding: '10px', fontSize: '1.5vw'}}> Random </label>
 								<input 
 									style={{
 										textAlign:'center'
@@ -196,7 +197,7 @@ function Settings (){
 						{LinkSettings.isHoliday ? 
 						<Grid.Column>
 						<div className='centered' width="100%;" height="100%;">
-							<label title={5} onClick={updateTheme} style={{ padding: '10px', fontSize: '1.5vw'}}> Holiday </label>
+							<label className={5} onClick={updateTheme} style={{ padding: '10px', fontSize: '1.5vw'}}> Holiday </label>
 							<input 
 								style={{
 									textAlign:'center'
