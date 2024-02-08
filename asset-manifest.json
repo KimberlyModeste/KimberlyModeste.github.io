@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ea913928.css",
-    "main.js": "/static/js/main.366aab6f.js",
+    "main.js": "/static/js/main.3e490651.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/P4P2.mp4": "/static/media/P4P2.64ede7970e6ee7f65315.mp4",
     "static/media/P4P1.mp4": "/static/media/P4P1.8ed43fc072ad1daf5a67.mp4",
@@ -13,14 +13,23 @@
     "static/media/brand-icons.svg": "/static/media/brand-icons.6729d29753e000c17489.svg",
     "static/media/icons.svg": "/static/media/icons.62d9dae4e0040e81c980.svg",
     "static/media/MoorelandLogo.png": "/static/media/MoorelandLogo.48ce6e893d32894b63db.png",
+    "static/media/vheart6.png": "/static/media/vheart6.a4ea8d1a6b4427737834.png",
+    "static/media/vheart4.png": "/static/media/vheart4.4a82a3c870af810f3df9.png",
+    "static/media/vheart2.png": "/static/media/vheart2.db1db9b2ffeb64f4f790.png",
+    "static/media/vheart8.png": "/static/media/vheart8.8983190862bde5b5731e.png",
     "static/media/CreativeFall.PNG": "/static/media/CreativeFall.2efa324e9992c6c12802.PNG",
+    "static/media/vheart7.png": "/static/media/vheart7.03780686be06fc1ea2e6.png",
     "static/media/CreativeSpring.PNG": "/static/media/CreativeSpring.565ef5fb5c2918a88264.PNG",
     "static/media/CreativeTree.PNG": "/static/media/CreativeTree.83eaf928dbe9a4e66d28.PNG",
+    "static/media/vheart3.png": "/static/media/vheart3.79bb173dc831ac521ab7.png",
     "static/media/CreativeWinter.PNG": "/static/media/CreativeWinter.cf1495f8cb62cc7cae41.PNG",
     "static/media/Master_Resume.pdf": "/static/media/Master_Resume.8f502ec2fde795c47e76.pdf",
+    "static/media/vheart1.png": "/static/media/vheart1.da45d074a7ac41bf3d74.png",
+    "static/media/vheart5.png": "/static/media/vheart5.f9f8d8e42f4d291b0072.png",
     "static/media/outline-icons.svg": "/static/media/outline-icons.9c4845b4b41ef40a22fa.svg",
     "static/media/icons.eot": "/static/media/icons.a01e3f2d6c83dc3aee17.eot",
     "static/media/icons.ttf": "/static/media/icons.c656b8caa454ed19b9a2.ttf",
+    "static/media/vheart9.png": "/static/media/vheart9.e7a6372bfc1a9adebccf.png",
     "static/media/AJourneyHome.jpg": "/static/media/AJourneyHome.44f94186fdb6b74f6716.jpg",
     "static/media/brand-icons.eot": "/static/media/brand-icons.d68fa3e67dbb653a13ce.eot",
     "static/media/brand-icons.ttf": "/static/media/brand-icons.65a2fb6d9aaa164b41a0.ttf",
@@ -52,11 +61,11 @@
     "static/media/Pumpkin.svg": "/static/media/Pumpkin.661de928fd22c191a4816f5e04583072.svg",
     "index.html": "/index.html",
     "main.ea913928.css.map": "/static/css/main.ea913928.css.map",
-    "main.366aab6f.js.map": "/static/js/main.366aab6f.js.map",
+    "main.3e490651.js.map": "/static/js/main.3e490651.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ea913928.css",
-    "static/js/main.366aab6f.js"
+    "static/js/main.3e490651.js"
   ]
 }
