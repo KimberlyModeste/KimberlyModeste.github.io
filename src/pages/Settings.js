@@ -62,6 +62,10 @@ function Settings (){
 				let today = new Date()
 				switch(today.getMonth())
 				{
+					case 1: 
+						LinkSettings.backgroundColor = "#ffc5e6"
+						LinkSettings.particleColor= "#ffffff";
+						break;
 					case 9:
 						LinkSettings.backgroundColor = "#E8863D"
 						LinkSettings.particleColor= "#34271F"

@@ -10,7 +10,14 @@ let LinkSettings = {
 let tg = new Date(date.getFullYear(), 10, 1)
 tg.setDate(tg.getDay() !== 4 ? (tg.getDate()+1 + ((8 - tg.getDate())% 7))+21 : tg.getDate()+21)
 
-if(date.getMonth() === 9 && date.getDate() <= 31)
+if (date.getMonth() === 1 && date.getDate() === 14)
+{
+	LinkSettings.backgroundColor = "#ffc5e6"
+	LinkSettings.particleColor= "#ffffff";
+	LinkSettings.themes = 5;
+	LinkSettings.isHoliday = true;
+}
+else if (date.getMonth() === 9 && date.getDate() <= 31)
 {
 	LinkSettings.backgroundColor = "#E8863D";
 	LinkSettings.particleColor= "#34271F";
@@ -31,9 +38,5 @@ else if (date.getMonth() === 11){
 	LinkSettings.isHoliday = true;
 
 }
-
-
-
-
 
 module.exports = {LinkSettings};

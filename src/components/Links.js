@@ -11,6 +11,16 @@ import leaf4 from "../resources/leaves4.png"
 import leaf5 from "../resources/leaves5.png"
 import leaf6 from "../resources/leaves6.png"
 
+import heart1 from "../resources/vheart1.png"
+import heart2 from "../resources/vheart2.png"
+import heart3 from "../resources/vheart3.png"
+import heart4 from "../resources/vheart4.png"
+import heart5 from "../resources/vheart5.png"
+import heart6 from "../resources/vheart6.png"
+import heart7 from "../resources/vheart7.png"
+import heart8 from "../resources/vheart8.png"
+import heart9 from "../resources/vheart9.png"
+
 
 let {LinkSettings}  = require('../modules/modSettings')
 
@@ -46,7 +56,20 @@ const Link = (props) => {
     tg.setDate(tg.getDay() !== 4 ? (tg.getDate()+1 + ((8 - tg.getDate())% 7))+21 : tg.getDate()+21)
 
 
-    if(today.getMonth() === 9 && today.getDate() <= 31)
+    if(today.getMonth() === 1 && today.getDate() === 14)
+    {
+      thisHoliday = "valentino"
+      holidayImg.push(heart1)
+      holidayImg.push(heart2)
+      holidayImg.push(heart3)
+      holidayImg.push(heart4)
+      holidayImg.push(heart5)
+      holidayImg.push(heart6)
+      holidayImg.push(heart7)
+      holidayImg.push(heart8)
+      holidayImg.push(heart9)
+    }
+    else if (today.getMonth() === 9 && today.getDate() <= 31)
     {
       thisHoliday = "halloween"
       holidayImg.push(pumpkin)
@@ -105,7 +128,7 @@ const Link = (props) => {
             },
             detectRetina: true,
             emitters: {
-              direction: ["new years", "foj"].includes(thisHoliday) ? "top" : ["thanksgiving", "christmas"].includes(thisHoliday) ? "bottom" :"none",
+              direction: ["new years", "foj"].includes(thisHoliday) ? "top" : ["thanksgiving", "christmas", "valentino"].includes(thisHoliday) ? "bottom" :"none",
             
               life: {
                 count: 0,
@@ -217,7 +240,7 @@ const Link = (props) => {
               links: {
                 color: partColor,
                 distance: 150,
-                enable: !["new years", "foj", "thanksgiving", "christmas"].includes(thisHoliday),
+                enable: !["new years", "foj", "thanksgiving", "christmas", "valentino"].includes(thisHoliday),
                 opacity: 0.5,
                 width: 1,
               },
@@ -225,9 +248,9 @@ const Link = (props) => {
                 enable: true,
                 angle:{
                   offset: 0,
-                  value: ["new years","thanksgiving", "christmas"].includes(thisHoliday) ? 90 : 0
+                  value: ["new years","thanksgiving", "christmas", "valentino"].includes(thisHoliday) ? 90 : 0
                 },
-                direction: ["thanksgiving", "christmas"].includes(thisHoliday) ? "bottom" :"none",
+                direction: ["thanksgiving", "christmas", "valentino"].includes(thisHoliday) ? "bottom" :"none",
                 gravity: {
                   acceleration: ["new years", "foj"].includes(thisHoliday) ? 15 : thisHoliday === "christmas" ? 9.81 : 0,
                   enable: ["new years", "foj"].includes(thisHoliday),
@@ -235,8 +258,8 @@ const Link = (props) => {
                   maxSpeed: ["new years", "foj"].includes(thisHoliday) ? 100 : 0
                 },
                 outModes: {
-                  default: ["new years", "foj"].includes(thisHoliday) ? "destroy" : ["thanksgiving", "christmas"].includes(thisHoliday) ? "out" : "bounce",
-                  top: ["new years", "foj"].includes(thisHoliday) ? "none" : ["thanksgiving", "christmas"].includes(thisHoliday) ? "out" : "bounce",
+                  default: ["new years", "foj"].includes(thisHoliday) ? "destroy" : ["thanksgiving", "christmas", "valentino"].includes(thisHoliday) ? "out" : "bounce",
+                  top: ["new years", "foj"].includes(thisHoliday) ? "none" : ["thanksgiving", "christmas", "valentino"].includes(thisHoliday) ? "out" : "bounce",
                 },
                 speed: ["new years", "foj"].includes(thisHoliday) ? { min: 10, max: 20 } : thisHoliday === "thanksgiving" ? {min: 1, max: 2.5} : 2,
                 trail: {
@@ -320,6 +343,55 @@ const Link = (props) => {
                   },
                   {
                     src: holidayImg[5],
+                    width: 100,
+                    height: 100,
+                  },
+                ]
+                :
+                thisHoliday === "valentino" ?
+                [
+                  {
+                    src: holidayImg[0],
+                    width: 100,
+                    height: 100,
+                  },
+                  {
+                    src: holidayImg[1],
+                    width: 100,
+                    height: 100,
+                  },
+                  {
+                    src: holidayImg[2],
+                    width: 100,
+                    height: 100,
+                  },
+                  {
+                    src: holidayImg[3],
+                    width: 100,
+                    height: 100,
+                  },
+                  {
+                    src: holidayImg[4],
+                    width: 100,
+                    height: 100,
+                  },
+                  {
+                    src: holidayImg[5],
+                    width: 100,
+                    height: 100,
+                  },
+                  {
+                    src: holidayImg[6],
+                    width: 100,
+                    height: 100,
+                  },
+                  {
+                    src: holidayImg[7],
+                    width: 100,
+                    height: 100,
+                  },
+                  {
+                    src: holidayImg[8],
                     width: 100,
                     height: 100,
                   },
