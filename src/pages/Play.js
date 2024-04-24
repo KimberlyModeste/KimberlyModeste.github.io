@@ -85,6 +85,15 @@ function Play(){
             content="Just a basic text summarizer that uses Natural Language Programming"
             position="top center"
           />
+          <Popup 
+            trigger={
+              <Grid.Column className="carouselCard">
+                <PlayerCard Name="Ultimate Tic-Tac-Toe" target="_blank" Url="https://kimberlymodeste.github.io/UltimateTicTacToe/"/>
+              </Grid.Column>
+            }
+            content="THE ULTIMATE WAY TO PLAY TICTACTOE!!!"
+            position="top center"
+          />
         </Carousel>
       </div>
       <div className="playDiv">
