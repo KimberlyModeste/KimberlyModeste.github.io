@@ -91,7 +91,7 @@ function Play(){
                 <PlayerCard Name="Ultimate Tic-Tac-Toe" Image='' target="_blank" Url="https://kimberlymodeste.github.io/UltimateTicTacToe/"/>
               </Grid.Column>
             }
-            content="THE ULTIMATE WAY TO PLAY TICTACTOE!!!"
+            content="THE ULTIMATE WAY TO PLAY TIC-TAC-TOE!!!"
             position="top center"
           />
         </Carousel>
