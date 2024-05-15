@@ -12,6 +12,7 @@ import MP from '../resources/MoorelandLogo.png'
 import Syn from '../resources/mainScreen.png'
 import cg from '../resources/ComputerGraphics.png'
 import ts from '../resources/TextSummarizer.jpg'
+import uttt from '../resources/UltimateTicTacToe.jpg'
 
 function Play(){
   const responsive = {
@@ -88,7 +89,7 @@ function Play(){
           <Popup 
             trigger={
               <Grid.Column className="carouselCard">
-                <PlayerCard Name="Ultimate Tic-Tac-Toe" Image='' target="_blank" Url="https://kimberlymodeste.github.io/UltimateTicTacToe/"/>
+                <PlayerCard Name="Ultimate Tic-Tac-Toe" Image={uttt} target="_blank" Url="https://kimberlymodeste.github.io/UltimateTicTacToe/"/>
               </Grid.Column>
             }
             content="THE ULTIMATE WAY TO PLAY TIC-TAC-TOE!!!"
