@@ -98,6 +98,7 @@ const Link = (props) => {
     {
       thisHoliday = "foj"
     }
+    
   }
 
   
@@ -137,7 +138,7 @@ const Link = (props) => {
               },
               rate: {
                 delay: 0.06,
-                quantity: ["new years"].includes(thisHoliday) ? 1 : 0
+                quantity: ["new years", "foj"].includes(thisHoliday) ? 1 : 0
               },
               size: {
                 width: 100,
