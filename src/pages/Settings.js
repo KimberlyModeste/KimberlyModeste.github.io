@@ -1,7 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Links from '../components/Links'
 import MenuBar from '../components/MenuBar';
 import { Grid } from "semantic-ui-react";
+import { textbox, code } from '../config';
 
 
 let {LinkSettings}  = require('../modules/modSettings')
@@ -16,9 +17,43 @@ function Settings (){
 		themes: LinkSettings.themes
 	}
 
+	const[isActivated, setActivated] = useState(false)
+	const[checkActive, setCheckActivated] = useState("")
 	const[check, setCheck] = useState(LinkSettings.particlesOn)
 	const[theme, setTheme] = useState(LinkSettings.themes)
-	const[, setRandom] =useState("")
+	const[, setRandom] = useState("")
+
+	useEffect(() => {
+		if(isActivated)
+			return
+		else
+		{
+			function keyDownHandler(event) {
+				let temp = checkActive
+				temp += event.key
+				console.log(temp)
+				if(textbox === temp)
+				{
+					setActivated(true)
+					return
+				}
+				
+				for(let i = 0; i < temp.length; i++)
+				{
+					if(textbox[i] !== temp[i])
+					{
+						setCheckActivated("")
+						return
+					}
+				}
+				setCheckActivated(temp)
+			}
+			document.addEventListener("keydown", keyDownHandler)
+			return () => {
+				document.removeEventListener("keydown", keyDownHandler);
+			};
+		}
+	}, [checkActive, isActivated]);
 
 	function updateTheme(e){
 		console.log(e)
@@ -97,6 +132,16 @@ function Settings (){
 	function updateLinks(){
 		LinkSettings.particlesOn = !check
 		setCheck(!check)
+	}
+
+	function codeUpdate()
+	{
+		let codeInput = document.getElementById("codeInput").value;
+		
+		if(codeInput === code)
+		{
+			console.log("Time is almost here")
+		}
 	}
 	
 	return (
@@ -219,7 +264,9 @@ function Settings (){
 						
 					</Grid>
 					{/* code stuff */}
-					{/* <Grid columns={1} centered>
+					{
+						isActivated ?
+						<Grid columns={1} centered>
 						<Grid.Column>
 							<div className='centered' width="100%;" height="100%;">
 								<label style={{ padding: '10px', fontSize: '1.5vw'}}> Enter Code </label>
@@ -243,7 +290,11 @@ function Settings (){
 
 							</div>
 						</Grid.Column>
-					</Grid> */}
+					</Grid>
+					: 
+					<></>
+					}
+					
 									
 				</div>
 			</div>
