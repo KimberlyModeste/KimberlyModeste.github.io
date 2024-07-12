@@ -25,13 +25,20 @@ function Settings (){
 
 	useEffect(() => {
 		if(isActivated)
-			return
+		{
+			function onEnter(event){
+				codeUpdate()
+			}
+			document.addEventListener("keydown", onEnter)
+			return () => {
+				document.removeEventListener("keydown", onEnter);
+			};
+		}
 		else
 		{
 			function keyDownHandler(event) {
 				let temp = checkActive
 				temp += event.key
-				console.log(temp)
 				if(textbox === temp)
 				{
 					setActivated(true)
@@ -140,7 +147,7 @@ function Settings (){
 		
 		if(codeInput === code)
 		{
-			console.log("Time is almost here")
+			console.log("For now we wait.")
 		}
 	}
 	
@@ -272,6 +279,7 @@ function Settings (){
 								<label style={{ padding: '10px', fontSize: '1.5vw'}}> Enter Code </label>
 								<input 
 									id='codeInput'
+									autoComplete='off'
 									style={{
 										textAlign:'center',
 										background: 'black',
@@ -294,8 +302,6 @@ function Settings (){
 					: 
 					<></>
 					}
-					
-									
 				</div>
 			</div>
 			
