@@ -75,7 +75,7 @@ const Link = (props) => {
       holidayImg.push(pumpkin)
       holidayImg.push(spider)
     }
-    else if(today.getMonth() === 10 && today.getDate() <= tg.getDate())
+    else if(today.getMonth() === 10 )// && today.getDate() <= tg.getDate())
     {
       thisHoliday = "thanksgiving"
       
