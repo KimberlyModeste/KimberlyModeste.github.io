@@ -56,7 +56,7 @@ function Play(){
                 <PlayerCard Name="Text Summarizer" Image={ts} target="_blank" Url="https://kimberlymodeste.github.io/TextSummarizer/"/>
               </Grid.Column>
             }
-            content="Just a basic text summarizer that uses Natural Language Programming. Goes to sleep when not in use, try your prompt a few times for it to wake up."
+            content="Just a basic text summarizer that uses Natural Language Processing. Goes to sleep when not in use, try your prompt a few times for it to wake up."
             position="top center"
           />
           <Popup 
