@@ -1,6 +1,8 @@
 import React from 'react'
 import {Card, Image} from 'semantic-ui-react'
 
+import close from '../resources/closed.jpg'
+
 const PlayerCard = (props) => {
 
 	return (
@@ -11,7 +13,13 @@ const PlayerCard = (props) => {
 					</Card.Description>
 				</Card.Content>
 				{
-					props.Image !== ''? <Image src={props.Image} /> : <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
+					props.Image !== '' ? 
+						props.Closed ? 
+							<div className='closed-div'>
+								<Image className='closed-og-img' src={props.Image}  /> 
+								<Image className='closed-img' src={close}  />
+							</div>
+							: <Image src={props.Image}  />: <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
 				}
 			</Card>
 	)

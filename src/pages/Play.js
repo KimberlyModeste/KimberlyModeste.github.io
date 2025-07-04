@@ -13,6 +13,7 @@ import Syn from '../resources/mainScreen.png'
 import cg from '../resources/ComputerGraphics.png'
 import ts from '../resources/TextSummarizer.jpg'
 import uttt from '../resources/UltimateTicTacToe.jpg'
+import close from '../resources/closed.jpg'
 
 function Play(){
   const responsive = {
@@ -53,15 +54,6 @@ function Play(){
           <Popup 
             trigger={
               <Grid.Column className="carouselCard">
-                <PlayerCard Name="Text Summarizer" Image={ts} target="_blank" Url="https://kimberlymodeste.github.io/TextSummarizer/"/>
-              </Grid.Column>
-            }
-            content="Just a basic text summarizer that uses Natural Language Processing. Goes to sleep when not in use, try your prompt a few times for it to wake up."
-            position="top center"
-          />
-          <Popup 
-            trigger={
-              <Grid.Column className="carouselCard">
                 <PlayerCard Name="Mooreland Properties" Image={MP} target="_blank" Url="https://smoothstack35-dev-ed.develop.my.site.com/accountportal/s/"/>
               </Grid.Column>
             }
@@ -93,6 +85,16 @@ function Play(){
               </Grid.Column>
             }
             content="THE ULTIMATE WAY TO PLAY TIC-TAC-TOE!!!"
+            position="top center"
+          />
+          <Popup 
+            trigger={
+              <Grid.Column className="carouselCard">
+                {/* <PlayerCard Name="Text Summarizer" Image={ts} target="_blank" Url="https://kimberlymodeste.github.io/TextSummarizer/" */}
+                <PlayerCard Name="Text Summarizer" Image={ts} target="_blank" Url="https://github.com/KimberlyModeste/TextSummarizer" Closed={true}/>
+              </Grid.Column>
+            }
+            content="Just a basic text summarizer that uses Natural Language Processing. Closed because it goes to sleep too often. Now goes to github page"
             position="top center"
           />
         </Carousel>
